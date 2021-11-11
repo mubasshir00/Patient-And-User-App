@@ -1,0 +1,422 @@
+[
+    {
+        "id":"1",
+        "name":"Rashed Khan",
+        "title":"Pulmono Sergeon, Dhaka",
+        "detailsAddress":"Azimpur Dhaka",
+        "cost":"200",
+        "patients":"301",
+        "rating":"5",
+        "experience":"6",
+        "time":"6:30",
+        "timeZone":"PM",
+        "fee":"200",
+        "speciality":"Cardiologist",
+        "registration":"A66003",
+        "medicalExperience":"3",
+        "schedule":{
+            "Morning":[
+                {
+                    "id":"1",
+                    "morningTime":"9.30 AM"
+                },
+                {
+                    "id":"2",
+                    "morningTime":"10.00 AM"
+                },
+                {
+                    "id":"3",
+                    "morningTime":"10.30 AM"
+                },
+                {
+                    "id":"4",
+                    "morningTime":"11.00 AM"
+                },
+                {
+                    "id":"5",
+                    "morningTime":"11.30 AM"
+                },
+                {
+                    "id":"6",
+                    "morningTime":"12.00 AM"
+                }
+            ],
+            "Evening":[
+                {
+                    "id":"1",
+                    "eveningTime":"6.30 AM"
+                },
+                {
+                    "id":"2",
+                    "eveningTime":"7.30 AM"
+                },
+                {
+                    "id":"3",
+                    "eveningTime":"8.30 AM"
+                },
+                {
+                    "id":"4",
+                    "eveningTime":"6.00 AM"
+                },
+                {
+                    "id":"5",
+                    "eveningTime":"7.30 AM"
+                },
+                {
+                    "id":"6",
+                    "eveningTime":"8.00 AM"
+                }
+            ]
+        }
+    },
+    {
+        "id":"2",
+        "name":"Rashed Khan",
+        "title":"Pulmono Sergeon, Dhaka",
+        "detailsAddress":"Azimpur Dhaka",
+        "cost":"200",
+        "patients":"301",
+        "rating":"5",
+        "experience":"6",
+        "time":"6:30",
+        "timeZone":"PM",
+        "fee":"200",
+        "speciality":"Cardiologist",
+        "registration":"A66003",
+        "medicalExperience":"3",
+        "schedule":{
+            "Morning":[
+                {
+                    "id":"1",
+                    "morningTime":"9.30 AM"
+                },
+                {
+                    "id":"2",
+                    "morningTime":"10.00 AM"
+                },
+                {
+                    "id":"3",
+                    "morningTime":"10.30 AM"
+                },
+                {
+                    "id":"4",
+                    "morningTime":"11.00 AM"
+                },
+                {
+                    "id":"5",
+                    "morningTime":"11.30 AM"
+                },
+                {
+                    "id":"6",
+                    "morningTime":"12.00 AM"
+                }
+            ],
+            "Evening":[
+                {
+                    "id":"1",
+                    "eveningTime":"6.30 AM"
+                },
+                {
+                    "id":"2",
+                    "eveningTime":"7.30 AM"
+                },
+                {
+                    "id":"3",
+                    "eveningTime":"8.30 AM"
+                },
+                {
+                    "id":"4",
+                    "eveningTime":"6.00 AM"
+                },
+                {
+                    "id":"5",
+                    "eveningTime":"7.30 AM"
+                },
+                {
+                    "id":"6",
+                    "eveningTime":"8.00 AM"
+                }
+            ]
+        }
+    },
+    {
+        "id":"3",
+        "name":"Rashed Khan",
+        "title":"Pulmono Sergeon, Dhaka",
+        "detailsAddress":"Azimpur Dhaka",
+        "cost":"200",
+        "patients":"301",
+        "rating":"5",
+        "experience":"6",
+        "time":"6:30",
+        "timeZone":"PM",
+        "fee":"200",
+        "speciality":"Cardiologist",
+        "registration":"A66003",
+        "medicalExperience":"3",
+        "schedule":{
+            "Morning":[
+                {
+                    "id":"1",
+                    "morningTime":"9.30 AM"
+                },
+                {
+                    "id":"2",
+                    "morningTime":"10.00 AM"
+                },
+                {
+                    "id":"3",
+                    "morningTime":"10.30 AM"
+                },
+                {
+                    "id":"4",
+                    "morningTime":"11.00 AM"
+                },
+                {
+                    "id":"5",
+                    "morningTime":"11.30 AM"
+                },
+                {
+                    "id":"6",
+                    "morningTime":"12.00 AM"
+                }
+            ],
+            "Evening":[
+                {
+                    "id":"1",
+                    "eveningTime":"6.30 AM"
+                },
+                {
+                    "id":"2",
+                    "eveningTime":"7.30 AM"
+                },
+                {
+                    "id":"3",
+                    "eveningTime":"8.30 AM"
+                },
+                {
+                    "id":"4",
+                    "eveningTime":"6.00 AM"
+                },
+                {
+                    "id":"5",
+                    "eveningTime":"7.30 AM"
+                },
+                {
+                    "id":"6",
+                    "eveningTime":"8.00 AM"
+                }
+            ]
+        }
+    },
+    {
+        "id":"4",
+        "name":"Rashed Khan",
+        "title":"Pulmono Sergeon, Dhaka",
+        "detailsAddress":"Azimpur Dhaka",
+        "cost":"200",
+        "patients":"301",
+        "rating":"5",
+        "experience":"6",
+        "time":"6:30",
+        "timeZone":"PM",
+        "fee":"200",
+        "speciality":"Cardiologist",
+        "registration":"A66003",
+        "medicalExperience":"3",
+        "schedule":{
+            "Morning":[
+                {
+                    "id":"1",
+                    "morningTime":"9.30 AM"
+                },
+                {
+                    "id":"2",
+                    "morningTime":"10.00 AM"
+                },
+                {
+                    "id":"3",
+                    "morningTime":"10.30 AM"
+                },
+                {
+                    "id":"4",
+                    "morningTime":"11.00 AM"
+                },
+                {
+                    "id":"5",
+                    "morningTime":"11.30 AM"
+                },
+                {
+                    "id":"6",
+                    "morningTime":"12.00 AM"
+                }
+            ],
+            "Evening":[
+                {
+                    "id":"1",
+                    "eveningTime":"6.30 AM"
+                },
+                {
+                    "id":"2",
+                    "eveningTime":"7.30 AM"
+                },
+                {
+                    "id":"3",
+                    "eveningTime":"8.30 AM"
+                },
+                {
+                    "id":"4",
+                    "eveningTime":"6.00 AM"
+                },
+                {
+                    "id":"5",
+                    "eveningTime":"7.30 AM"
+                },
+                {
+                    "id":"6",
+                    "eveningTime":"8.00 AM"
+                }
+            ]
+        }
+    },
+    {
+        "id":"5",
+        "name":"Rashed Khan",
+        "title":"Pulmono Sergeon, Dhaka",
+        "detailsAddress":"Azimpur Dhaka",
+        "cost":"200",
+        "patients":"301",
+        "rating":"5",
+        "experience":"6",
+        "time":"6:30",
+        "timeZone":"PM",
+        "fee":"200",
+        "speciality":"Cardiologist",
+        "registration":"A66003",
+        "medicalExperience":"3",
+        "schedule":{
+            "Morning":[
+                {
+                    "id":"1",
+                    "morningTime":"9.30 AM"
+                },
+                {
+                    "id":"2",
+                    "morningTime":"10.00 AM"
+                },
+                {
+                    "id":"3",
+                    "morningTime":"10.30 AM"
+                },
+                {
+                    "id":"4",
+                    "morningTime":"11.00 AM"
+                },
+                {
+                    "id":"5",
+                    "morningTime":"11.30 AM"
+                },
+                {
+                    "id":"6",
+                    "morningTime":"12.00 AM"
+                }
+            ],
+            "Evening":[
+                {
+                    "id":"1",
+                    "eveningTime":"6.30 AM"
+                },
+                {
+                    "id":"2",
+                    "eveningTime":"7.30 AM"
+                },
+                {
+                    "id":"3",
+                    "eveningTime":"8.30 AM"
+                },
+                {
+                    "id":"4",
+                    "eveningTime":"6.00 AM"
+                },
+                {
+                    "id":"5",
+                    "eveningTime":"7.30 AM"
+                },
+                {
+                    "id":"6",
+                    "eveningTime":"8.00 AM"
+                }
+            ]
+        }
+    },
+    {
+        "id":"6",
+        "name":"Rashed Khan",
+        "title":"Pulmono Sergeon, Dhaka",
+        "detailsAddress":"Azimpur Dhaka",
+        "cost":"200",
+        "patients":"301",
+        "rating":"5",
+        "experience":"6",
+        "time":"6:30",
+        "timeZone":"PM",
+        "fee":"200",
+        "speciality":"Cardiologist",
+        "registration":"A66003",
+        "medicalExperience":"3",
+        "schedule":{
+            "Morning":[
+                {
+                    "id":"1",
+                    "morningTime":"9.30 AM"
+                },
+                {
+                    "id":"2",
+                    "morningTime":"10.00 AM"
+                },
+                {
+                    "id":"3",
+                    "morningTime":"10.30 AM"
+                },
+                {
+                    "id":"4",
+                    "morningTime":"11.00 AM"
+                },
+                {
+                    "id":"5",
+                    "morningTime":"11.30 AM"
+                },
+                {
+                    "id":"6",
+                    "morningTime":"12.00 AM"
+                }
+            ],
+            "Evening":[
+                {
+                    "id":"1",
+                    "eveningTime":"6.30 AM"
+                },
+                {
+                    "id":"2",
+                    "eveningTime":"7.30 AM"
+                },
+                {
+                    "id":"3",
+                    "eveningTime":"8.30 AM"
+                },
+                {
+                    "id":"4",
+                    "eveningTime":"6.00 AM"
+                },
+                {
+                    "id":"5",
+                    "eveningTime":"7.30 AM"
+                },
+                {
+                    "id":"6",
+                    "eveningTime":"8.00 AM"
+                }
+            ]
+        }
+    }
+]
