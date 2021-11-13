@@ -1,42 +1,52 @@
-import { Box, FormControl, Input, ScrollView, Stack } from 'native-base'
+import { useNavigation } from '@react-navigation/native'
+import { Box, FormControl, Text, Input, Stack, ScrollView, Center ,Image} from 'native-base'
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
-import { profileData } from '../../assets/data/Accordion'
+import { StyleSheet, View } from 'react-native'
+import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome'
+import { profileData } from '../../../assets/data/Profile/ProfileData'
+
+
 
 const PersonalInformation = () => {
+    const { id, name, image, bloodgroup, height, weight} = profileData
     return (
-        <ScrollView 
-        w={{
-            base:'90%',
-            md:'90%',
-        }}
-        >
-            <Stack
-            space={2.5}
-            alignSelf="center"
-            px="4"
-            safeArea
-            mt="4"
-            w={{
-                base:'100%',
-                md:'25%'
-            }}
-            >
+        <ScrollView>
+            <Center>
                 <Box>
-                   {
-                       profileData.map((item,index)=>{
-                           return(
-                               <FormControl key={item.id} isDisabled mb="2">
-                                   <FormControl.Label>
-                                       {item.title}
-                                   </FormControl.Label>
-                                   <Input placeholder={item.text} />
-                               </FormControl>
-                           )
-                       })
-                   }
+                    <Box>
+                        <Image
+
+                            alt="ProfileImage" />
+                    </Box>
+                    <Box>
+                        <Text 
+                        fontSize="20" 
+                        color="black"
+                        fontWeight="bold"
+                        >{name}</Text>
+                    </Box>
                 </Box>
-            </Stack>
+                <Box>
+                    <FontAwesomeIcon name="edit" size={30}/>
+                </Box>
+                
+            </Center>
+            <FormControl>
+                <Stack mx="4">
+                    <FormControl.Label>Name</FormControl.Label>
+                    <Input type="text" placeholder="Full Name"/>
+                    <FormControl.Label>NID</FormControl.Label>
+                    <Input type="text" placeholder="NID" />
+                    <FormControl.Label>Death of Birth</FormControl.Label>
+                    <Input type="text" placeholder="1 January 1900" />
+                    <FormControl.Label>Mobile</FormControl.Label>
+                    <Input type="text" placeholder="+8801* ***** ***" />
+                    <FormControl.Label>Email</FormControl.Label>
+                    <Input type="text" placeholder="bdemr@gmail.com" />
+                    <FormControl.Label>Address</FormControl.Label>
+                    <Input type="text" placeholder="Address" />
+                </Stack>
+            </FormControl>
         </ScrollView>
     )
 }

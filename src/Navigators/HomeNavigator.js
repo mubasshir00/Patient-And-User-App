@@ -14,6 +14,14 @@ import SingleSpecialist from '../QuickSpecialist/SingleSpecialist'
 import Schedule from '../Components/Schedule/Schedule'
 import Summery from '../Components/Summery/Summery'
 import Payment from '../Components/Payment/Payment'
+import PersonalInformation from '../Screen/ProfileScreens/Profile/PersonalInformation'
+import MyVitals from '../Screen/ProfileScreens/MyVitals/MyVitals'
+import BloodTest from '../Screen/MyVitalsScreens/BloodTest'
+import HeartRate from '../Screen/MyVitalsScreens/HeartRate'
+import BMI from '../Screen/MyVitalsScreens/BMI'
+import Respiratory from '../Screen/MyVitalsScreens/Respiratory'
+import OxygenSaturation from '../Screen/MyVitalsScreens/OxygenSaturation'
+import Medication from '../Screen/MedicationScreens/Medication'
 
 const Stack = createStackNavigator()
 
@@ -99,7 +107,38 @@ function MyStack() {
                 name="Payment"
                 component={Payment}
             />
-            
+            <Stack.Screen
+            name="Personal Information"
+            component={PersonalInformation}
+            />
+            <Stack.Screen
+            name="My Vitals"
+            component={MyVitals}
+            />  
+            <Stack.Screen
+            name="Blood Test"
+            component={BloodTest}
+            />
+            <Stack.Screen
+            name="Heart Rate"
+            component={HeartRate}
+            />
+            <Stack.Screen
+            name="BMI"
+            component={BMI}
+            />
+            <Stack.Screen
+            name="Respiratory"
+            component={Respiratory}
+            />
+            <Stack.Screen
+            name="Oxygen Saturation"
+            component={OxygenSaturation}
+            />
+            <Stack.Screen
+            name="Medication"
+            component={Medication}
+            />
         </Stack.Navigator>
     )
 }

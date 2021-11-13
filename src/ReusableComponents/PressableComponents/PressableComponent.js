@@ -1,10 +1,14 @@
+import { useNavigation } from '@react-navigation/native'
 import { Box, Pressable ,Text} from 'native-base'
 import React from 'react'
 import { StyleSheet, View } from 'react-native'
 
 const PressableComponent = ({children,...props}) => {
+    const navigation = useNavigation()
     return (
-        <Pressable>
+        <Pressable
+            onPress={() => navigation.navigate(`${props.navigationName }`)}
+        >
             {({isHovered,isFocused,isPressed})=>{
                 return(
                     <Box 

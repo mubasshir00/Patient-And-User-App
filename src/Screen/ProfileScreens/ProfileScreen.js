@@ -8,15 +8,20 @@ import PressableComponent from '../../ReusableComponents/PressableComponents/Pre
 
 import FontAweSome from 'react-native-vector-icons/FontAwesome'
 import FontAweSome5 from 'react-native-vector-icons/FontAwesome5'
+import { useNavigation } from '@react-navigation/native'
 
 const ProfileScreen = () => {
     const [profileState, setProfileState] = useState([])
+    
+    const navigation = useNavigation()
+
     useEffect(() => {
         setProfileState(profileData)
         return () => {
             setProfileState([])
         }
     }, [])
+
     console.log(image);
     const { id, name, image, bloodgroup, height,weight} = {...profileState}
     return (
@@ -29,12 +34,39 @@ const ProfileScreen = () => {
             height={height} 
             weight={weight}/>
 
+
+            <PressableComponent
+                mx="3" py="2"
+                px="3" my="2"
+                fontSize="18"
+                alignItems="center"
+                bgPressed="white"
+                navigationName="Medication"
+            >
+                <Box
+                    flexDirection="row"
+                    color="black"
+                    fontWeight="bold"
+                    alignItems="center"
+                    fontSize="19"
+                    justifyContent="space-between"
+                >
+                    <Box flexDirection="row" alignItems="center">
+                        <FontAweSome5 name="hand-holding-medical" style={[styles.icon, { fontSize: 15, textAlign: 'center', alignItems: 'center' }]} />
+                        {`  `}
+                        <Text color="black">Medication</Text>
+                    </Box>
+                    <FontAweSome name="chevron-right" style={styles.icon} />
+                </Box>
+            </PressableComponent>
+
             <PressableComponent  
             mx="3" py="2" 
             px="3" my="2"
             fontSize="18" 
             alignItems="center" 
             bgPressed="white"
+            navigationName="Personal Information"
             >
 
             <Box 
@@ -44,6 +76,7 @@ const ProfileScreen = () => {
             alignItems="center"
             fontSize="19"
             justifyContent="space-between"
+
             >
                 <Box flexDirection="row">
                     <FontAweSome  name="user-circle-o" style={styles.icon} />
@@ -61,6 +94,7 @@ const ProfileScreen = () => {
                 fontSize="18"
                 alignItems="center"
                 bgPressed="white"
+                navigationName="My Vitals"
             >
                 <Box
                     flexDirection="row"
