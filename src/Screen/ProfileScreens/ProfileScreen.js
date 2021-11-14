@@ -42,6 +42,7 @@ const ProfileScreen = () => {
                 alignItems="center"
                 bgPressed="white"
                 navigationName="Medication"
+                rounded="8"
             >
                 <Box
                     flexDirection="row"
@@ -67,6 +68,7 @@ const ProfileScreen = () => {
             alignItems="center" 
             bgPressed="white"
             navigationName="Personal Information"
+            rounded="8"
             >
 
             <Box 
@@ -76,7 +78,6 @@ const ProfileScreen = () => {
             alignItems="center"
             fontSize="19"
             justifyContent="space-between"
-
             >
                 <Box flexDirection="row">
                     <FontAweSome  name="user-circle-o" style={styles.icon} />
@@ -95,6 +96,7 @@ const ProfileScreen = () => {
                 alignItems="center"
                 bgPressed="white"
                 navigationName="My Vitals"
+                rounded="8"
             >
                 <Box
                     flexDirection="row"
@@ -119,6 +121,7 @@ const ProfileScreen = () => {
                 fontSize="18"
                 alignItems="center"
                 bgPressed="white"
+                rounded="8"
             >
                 <Box
                     flexDirection="row"
@@ -143,6 +146,7 @@ const ProfileScreen = () => {
                 fontSize="18"
                 alignItems="center"
                 bgPressed="white"
+                rounded="8"
             >
                 <Box
                     flexDirection="row"

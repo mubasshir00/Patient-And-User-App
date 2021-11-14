@@ -18,15 +18,15 @@ const renderScene = SceneMap({
 const Medication = () => {
     const [index, setIndex] = useState(0);
     const [routes, setRoutes] = useState([
-        { key:'CurrentMedication',title:'Current Medication'},
-        {key:'StopedMedication',title:'Stopped Medication'},
-        {key:'AddMedication',title:'Add Medicine'}
+        { key: 'CurrentMedication', title1: 'Current', title2:'Medication'},
+        { key: 'StopedMedication', title1: 'Stopped', title2: 'Medication'},
+        { key: 'AddMedication', title1: 'Add', title2: 'Medicine'}
     ])
 
     const renderTabBar = (props) =>{
         const inputRange = props.navigationState.routes.map((x,i)=>i);
         return(
-            <Box flexDirection="row">
+            <Box flexDirection="row" background="blue.100">
                 {
                     props.navigationState.routes.map((route,i)=>{
                         const opacity = props.position.interpolate({
@@ -55,8 +55,22 @@ const Medication = () => {
                                     setIndex(i);
                                 }}
                                 >
-                                    <Animated.Text style={{color}}>
-                                        {route.title}
+                                    <Animated.Text 
+                                    style={{color}}>
+                                        <Box>
+                                            <Text 
+                                            textAlign="center"
+                                            fontWeight="bold"
+                                            >
+                                                {route.title1}
+                                            </Text>
+                                            <Text 
+                                            textAlign="center"
+                                            fontWeight="bold"
+                                            >
+                                                {route.title2}
+                                            </Text>
+                                        </Box>
                                     </Animated.Text>
                                 </Pressable>
                             </Box>
@@ -75,7 +89,8 @@ const Medication = () => {
             onIndexChange={setIndex}
             initialLayout={initialLayout}
             style={{
-                marginTop:StatusBar.currentHeight
+                // marginTop:StatusBar.currentHeight
+                
             }}
             />
     )

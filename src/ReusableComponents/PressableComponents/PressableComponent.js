@@ -13,11 +13,12 @@ const PressableComponent = ({children,...props}) => {
                 return(
                     <Box 
                     bg={isPressed ? "blue.500" : isHovered ? "blue.800" : `${props.bgPressed}`}
-                    rounded="8"
+                    rounded={props.rounded}
                     py={props.py}
                     px={props.px}
                     mx={props.mx}
                     my={props.my}
+                    width={props.width}
                     // alignItems="flex-start"
                     // alignItems={props.alignItems}
                     style={{
