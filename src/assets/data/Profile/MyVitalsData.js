@@ -23,5 +23,10 @@ export const myVitalData = [
         id:5,
         image:require('../../images/MyVitals/oxygen-saturation.png'),
         title:'Oxygen Saturation'
+    },
+    {
+        id:6,
+        image:require('../../images/MyVitals/blood-pressure.png'),
+        title:'Blood Pressure'
     }
 ]

@@ -1,11 +1,11 @@
 import { Box, ScrollView } from 'native-base'
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
-import MedicalRecords from '../TabNavComponent/MedicalRecords/MedicalRecords'
+import MedicalRecords from './MedicalRecords/MedicalRecords'
 
 const MedicalRecord = () => {
     return (
-        <ScrollView backgroundColor="info.100" >
+        <ScrollView backgroundColor="blue.100" >
             <MedicalRecords/>
         </ScrollView>
     )

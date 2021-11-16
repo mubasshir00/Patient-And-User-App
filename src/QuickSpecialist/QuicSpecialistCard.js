@@ -1,5 +1,6 @@
+import { Text } from 'native-base';
 import React from 'react'
-import { Dimensions, Image, StyleSheet, Text, View } from 'react-native'
+import { Dimensions, Image, StyleSheet, View } from 'react-native'
 
 var {width} = Dimensions.get("window");
 
@@ -13,7 +14,7 @@ const QuicSpecialistCard = (props) => {
                 style={styles.imageContainer}
                 resizeMode={'cover'}
                 />
-                <Text>{title}</Text>
+                <Text color="black" fontWeight="bold">{title}</Text>
             </View>
         </View>
     )
@@ -25,14 +26,14 @@ const styles = StyleSheet.create({
     container:{
         // width:width/4-20,
         // height:width/6,
-        padding:5,
+        paddingTop:7,
+        paddingBottom:7,
         borderRadius:1,
         marginTop:5,
         marginBottom:5,
-        marginHorizontal:5,
-        // marginLeft:10,
+        marginLeft:5,
         alignItems:'center',
-        elevation:8,
+        // elevation:8,
         backgroundColor:'white',
         justifyContent:'center'
     },

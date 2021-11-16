@@ -1,24 +1,28 @@
-import { Box, Container, Flex, Heading, Pressable } from 'native-base'
+import { Box, Container, Flex, Heading, Pressable, ScrollView } from 'native-base'
 import React from 'react'
 import { StyleSheet, Text, View, TouchableOpacity, Dimensions, ImageBackground } from 'react-native'
-const data = require('../../assets/data/articles.json');
-// console.log(data);
+import { articlesData } from '../../assets/data/articlesData'
+// console.log(articlesData);
 
 const {width,height} = Dimensions.get('window')
 
 const Articles = () => {
     return (
        <Box>
-           <Heading mt={4} ml={2} mb={2} fontSize={16}>Articles</Heading>
-               <View style={styles.articleContainer}>
+           <Heading mt={8} mb={3} ml={2} fontSize={16}>Articles</Heading>
+               <ScrollView 
+               horizontal={true}
+               style={styles.articleContainer}
+               >
                    {
-                       data.slice(0,3).map((item,index)=>{
+                    articlesData.map((item,index)=>{
                            return(
                                <ImageBackground 
-                               source={{uri:item.image}} 
+                               source={item.image} 
                                key={index}
                                resizeMode="cover"
                                blurRadius={6}
+                               
                                >
                                    <TouchableOpacity style={styles.card} >
                                        <Heading fontSize={12}>{item.title}</Heading>
@@ -28,7 +32,7 @@ const Articles = () => {
                            )
                        })
                    }
-               </View>
+            </ScrollView>
        </Box>
     )
 }
@@ -42,9 +46,10 @@ const styles = StyleSheet.create({
         width:width/3.3,
         margin:4,
         color:'black',
+        borderRadius:100
     },
     articleContainer:{
         flexDirection:'row',
-        justifyContent:'space-between',
+        // justifyContent:'space-between',
     }
 })

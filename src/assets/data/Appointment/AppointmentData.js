@@ -1,6 +1,7 @@
 export const appointmentData =[
     {
         "id":1,
+        "doctorName":"Dr Xyzab Uidk",
         "name":"For Rashed Khan",
         "title":"Cardiac Surgeon",
         image: require('../../images/images.jpeg'),
@@ -12,6 +13,7 @@ export const appointmentData =[
     },
     {
         "id": 2,
+        "doctorName": "Dr Xyzab Uidk",
         "name": "For Rashed Khan",
         "title": "Cardiac Surgeon",
         image: require('../../images/images.jpeg'),
@@ -23,6 +25,7 @@ export const appointmentData =[
     },
     {
         "id": 3,
+        "doctorName": "Dr Xyzab Uidk",
         "name": "For Rashed Khan",
         "title": "Cardiac Surgeon",
         image: require('../../images/images.jpeg'),
@@ -34,6 +37,7 @@ export const appointmentData =[
     },
     {
         "id": 4,
+        "doctorName": "Dr Xyzab Uidk",
         "name": "For Umar Akmal",
         "title": "Covid Surgeon",
         image: require('../../images/images.jpeg'),
@@ -45,6 +49,7 @@ export const appointmentData =[
     },
     {
         "id": 5,
+        "doctorName": "Dr Xyzab Uidk",
         "name": "For Umar Akmal",
         "title": "Covid Surgeon",
         "dateDay": "",

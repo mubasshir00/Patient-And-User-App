@@ -13,16 +13,16 @@ const MyVitals = () => {
     const navigation = useNavigation()
     return (
         <ScrollView backgroundColor="blue.100">
-            <Center my="4">
+            <Center my="2">
                 <Box>
-                    <Text fontSize="18"
+                    <Text fontSize="16"
                     color="gray.500"
                     fontWeight="bold"
                     >Check your</Text>
                 </Box>
                 <Box>
                     <Text 
-                    fontSize="24"
+                    fontSize="20"
                     fontWeight="bold"
                     color="black"
                     >Vitals 
@@ -67,7 +67,7 @@ export default MyVitals
 
 const styles = StyleSheet.create({
     imageIcon :{
-        width:40,
-        height:40
+        width:30,
+        height:30
     }
 })

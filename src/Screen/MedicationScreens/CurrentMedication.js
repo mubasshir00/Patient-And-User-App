@@ -6,7 +6,7 @@ import PressableComponent from '../../ReusableComponents/PressableComponents/Pre
 
 const CurrentMedication = () => {
   return (
-    <ScrollView>
+    <ScrollView background="#F0F4F7">
       <Stack px="6" py="4">
         {currentMedication.map(item => {
             const { id, medicine, subTitle, company, time, Dose, startingDate, lastDateofTaken} = item;

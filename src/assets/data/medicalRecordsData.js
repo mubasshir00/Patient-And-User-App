@@ -5,6 +5,7 @@ export const medicalRecords =[
         image:require('../images/prescription.png'),
         "count" : 3,
         "isNew":true,
+        "name":"Prescription"
     },
     {
         "id":"2",
@@ -12,12 +13,14 @@ export const medicalRecords =[
         image: require('../images/prescription.png'),
         "count":3,
         "isNew":false,
+        "name":"Lab Report"
     },
     {
         "id":"3",
         "title":"Emails",
         image:require('../images/email.png'),
         "count":3,
-        "isNew":false
+        "isNew":false,
+        "name":"Emails"
     }
 ]

@@ -2,6 +2,7 @@ import { useNavigation } from '@react-navigation/native'
 import { Box, Heading, ScrollView, Text, Pressable, Center} from 'native-base'
 import React, { useState } from 'react'
 import { StyleSheet, View } from 'react-native'
+import ProfileCard from '../../ReusableComponents/ProfileCard/ProfileCard'
 import Calender from './Calender'
 
 //props come from SingleSpecialist file
@@ -11,12 +12,9 @@ const Schedule = (props) => {
     // console.log(schedule.Evening);
     const navigation = useNavigation()
     return (
-        <ScrollView>
-            <Box background="gray.200" m="4">
-                <Center>
-                    <Heading>{name}</Heading>
-                    <Text>{title}</Text>
-                </Center>
+        <ScrollView background="white">
+            <Box background="blue.100" px="2" py="2.5" m="4">
+                <ProfileCard/>
             </Box>
             <Calender/>
             <Box 

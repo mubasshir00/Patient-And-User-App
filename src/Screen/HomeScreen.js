@@ -14,7 +14,7 @@ const HomeScreen = () => {
             <ScrollView>
                 <View style={{backgroundColor:'white'}}>
                     <Center>
-                        <Heading fontSize={29}>BDEMR</Heading>
+                        <Heading fontSize={29} fontFamily="Poppins-Regular">BDEMR</Heading>
                     </Center>
                 </View>
                 <HeroContent/>

@@ -9,6 +9,7 @@ import PressableComponent from '../../ReusableComponents/PressableComponents/Pre
 import FontAweSome from 'react-native-vector-icons/FontAwesome'
 import FontAweSome5 from 'react-native-vector-icons/FontAwesome5'
 import { useNavigation } from '@react-navigation/native'
+import { fontWeight } from 'styled-system'
 
 const ProfileScreen = () => {
     const [profileState, setProfileState] = useState([])
@@ -106,8 +107,10 @@ const ProfileScreen = () => {
                     fontSize="19"
                     justifyContent="space-between"
                 >
-                    <Box flexDirection="row">
-                        <FontAweSome5 name="notes-medical" style={styles.icon}/>
+                    <Box  flexDirection="row">
+                        <FontAweSome5
+                        name="notes-medical" 
+                        style={styles.icon}/>
                         {`    `}
                         <Text color="black">My Vitals</Text>
                     </Box>
@@ -115,7 +118,7 @@ const ProfileScreen = () => {
                 </Box>
             </PressableComponent>
 
-            <PressableComponent 
+            {/* <PressableComponent 
                 mx="3" py="2"
                 px="3" my="2"
                 fontSize="18"
@@ -138,7 +141,7 @@ const ProfileScreen = () => {
                     </Box>
                     <FontAweSome name="chevron-right" style={styles.icon} />
                 </Box>
-            </PressableComponent>
+            </PressableComponent> */}
 
             <PressableComponent 
                 mx="3" py="2"
@@ -147,6 +150,7 @@ const ProfileScreen = () => {
                 alignItems="center"
                 bgPressed="white"
                 rounded="8"
+                navigationName="Transaction History"
             >
                 <Box
                     flexDirection="row"
@@ -174,6 +178,6 @@ export default ProfileScreen
 const styles = StyleSheet.create({
     icon:{
         fontSize:20,
-        color:'black'
+        color:'black',
     }
 })

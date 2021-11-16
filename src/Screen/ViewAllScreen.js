@@ -1,12 +1,13 @@
+import { Box,Text } from 'native-base'
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
-
+import { StyleSheet, View } from 'react-native'
+import { data } from '../assets/data/quickspecialistdata'
 const ViewAllScreen = () => {
     
     return (
-        <View>
-            <Text>ViewAllScreen</Text>
-        </View>
+        <Box>
+            
+        </Box>
     )
 }
 

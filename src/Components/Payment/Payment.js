@@ -15,20 +15,20 @@ const Payment = () => {
                 borderRadius="10"
                 p="2"
                 >
-                    <ProfileCard />
+                <ProfileCard />
                 </Box>
                 <Box 
                 background="white"
                 my="4"
-                py="3"
+                py="2"
                 px="2"
                 flexDirection="row"
                 justifyContent="space-between"
                 alignItems="center"
                 borderRadius="6"
                 >
-                    <Heading fontSize="18">Payment Total</Heading>
-                    <Text color="blue.400" fontWeight="bold" fontSize="18">200 $</Text>
+                    <Heading fontSize="14">Payment Total</Heading>
+                    <Text color="blue.400" fontWeight="bold" fontSize="14">BDT 200</Text>
                 </Box>
                 <Box>
                     <Box
@@ -36,7 +36,7 @@ const Payment = () => {
                     alignItems="center"
                     justifyContent="space-between"
                     >
-                        <Heading fontSize="18">Pay Using Card</Heading>
+                        <Heading fontSize="15">Pay Using Card</Heading>
                         <Select
                         minWidth="130"
                         background="white"
@@ -76,21 +76,30 @@ const Payment = () => {
                         <FormControl.Label>
                             Card No
                         </FormControl.Label>
-                        <Input background="white"/>
-                        <Box>
-                            <FormControl.Label>
-                                Validity
-                            </FormControl.Label>
-                            <Input background="white" />
-                            <FormControl.Label>
-                                CVV
-                            </FormControl.Label>
-                            <Input background="white" />
+                        <Input background="white" fontSize="15" py="1"/>
+                        <Box 
+                        flexDirection="row"
+                        alignItems="center"
+                        justifyContent="space-between"
+                        my="5"
+                        >
+                            <Box alignItems="center" flexDirection="row">
+                                <FormControl.Label>
+                                    Validity
+                                </FormControl.Label>
+                                <Input width="100" fontSize="15" py="1" background="white" />
+                            </Box>
+                            <Box alignItems="center" flexDirection="row">
+                                <FormControl.Label>
+                                    CVV
+                                </FormControl.Label>
+                                <Input width="60" fontSize="15" py="1" background="white" />
+                            </Box>
                         </Box>
                         <FormControl.Label>
                             Name
                         </FormControl.Label>
-                        <Input background="white" />
+                        <Input background="white" fontSize="15" py="1"/>
 
                         <Box background="white" mt="4">
                             <Select
@@ -98,6 +107,7 @@ const Payment = () => {
                                 background="white"
                                 selectedValue={otherPaymentOption}
                                 accessibilityLabel="Other Payment Option"
+                                fontSize="16"
                                 placeholder="Other Payment Option"
                                 _selectedItem={{
                                     bg: "white",

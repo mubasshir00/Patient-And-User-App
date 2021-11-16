@@ -22,6 +22,11 @@ import BMI from '../Screen/MyVitalsScreens/BMI'
 import Respiratory from '../Screen/MyVitalsScreens/Respiratory'
 import OxygenSaturation from '../Screen/MyVitalsScreens/OxygenSaturation'
 import Medication from '../Screen/MedicationScreens/Medication'
+import BloodPressure from '../Screen/MyVitalsScreens/BloodPressure'
+import PrescriptionScreen from '../Screen/MedicalRecords/PrescriptionScreen'
+import LabReportScreen from '../Screen/MedicalRecords/LabReportScreen'
+import EmailsScreens from '../Screen/MedicalRecords/EmailsScreens'
+import TransactionScreen from '../Screen/TransactionHistory/TransactionScreen'
 
 const Stack = createStackNavigator()
 
@@ -138,6 +143,26 @@ function MyStack() {
             <Stack.Screen
             name="Medication"
             component={Medication}
+            />
+            <Stack.Screen 
+            name="Blood Pressure"
+            component={BloodPressure}
+            />
+            <Stack.Screen
+            name="Prescription"
+            component={PrescriptionScreen}
+            />
+            <Stack.Screen
+            name="Lab Report"
+            component={LabReportScreen}
+            />
+            <Stack.Screen
+            name="Emails"
+            component={EmailsScreens}
+            />
+            <Stack.Screen
+            name="Transaction History"
+            component={TransactionScreen}
             />
         </Stack.Navigator>
     )

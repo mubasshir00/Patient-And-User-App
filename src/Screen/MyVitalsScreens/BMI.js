@@ -33,7 +33,7 @@ const BMI = () => {
                                     <Box>
                                         <Text
                                         fontWeight="bold"
-                                        color="blue.500">{date}</Text>
+                                        color="blue.400">{date}</Text>
                                     </Box>
                                 </Center>
                                 <Center>
@@ -45,7 +45,7 @@ const BMI = () => {
                                     <Box>
                                         <Text
                                             fontWeight="bold"
-                                            color="blue.500"
+                                            color="blue.400"
                                         >{height}</Text>
                                     </Box>
                                 </Center>
@@ -58,7 +58,7 @@ const BMI = () => {
                                     <Box>
                                         <Text
                                             fontWeight="bold"
-                                            color="blue.500"
+                                            color="blue.400"
                                         >{wieght}</Text>
                                     </Box>
                                 </Center>
@@ -71,7 +71,7 @@ const BMI = () => {
                                     <Box>
                                         <Text
                                             fontWeight="bold"
-                                            color="blue.500"
+                                            color="blue.400"
                                         >{BMI}</Text>
                                     </Box>
                                 </Center>

@@ -12,15 +12,17 @@ const Summery = () => {
     const navigation = useNavigation()
 
     return (
-        <Box background="white" flex="1" p="4">
+        <Box background="white" flex="1">
 
-            <ProfileCard/>
+            <Box background="blue.100" px="2" py="2.5" borderRadius="10" mx="4">
+                <ProfileCard />
+            </Box>
             
             <ScrollView
             background="blue.100"
-            borderRadius="10"
             p="4"
             mt="4"
+            mx="4"
             >
                 <Box 
                 flexDirection="row"
@@ -56,16 +58,16 @@ const Summery = () => {
                     size="md"
                     colorScheme="blue"
                     color="blue.700"
-                        borderRadius="100"
+                    borderRadius="100"
                     icon={
                         <Icon
                             
-                            as={<Entypo name="circle" />}
+                            as={<Entypo name="circle" size={10} />}
                         />
                     }
                     defaultIsChecked
                     >
-                        Saima Akter
+                        <Text px="2" fontSize="15">Saima Akter</Text>
                     </Checkbox>
                 </Box>
 
@@ -84,7 +86,7 @@ const Summery = () => {
                         }
                         defaultIsChecked
                     >
-                        For Other
+                        <Text px="2" fontSize="15">For Other</Text>
                     </Checkbox>
                 </Box>
 
@@ -102,7 +104,7 @@ const Summery = () => {
                             bg={isPressed ? "blue.400" : isHovered ? "blue.300" : "blue.500"}
                             py="2"
                             mx="4"
-                            my="2"
+                            my="1"
                             rounded="8"
                             style={{
                                 transform: [

@@ -23,16 +23,18 @@ const QuickSpecialist = () => {
 
 
     return (
-        <View>
-            <Box style={styles.quickSpecialistTopHead} backgroundColor="info.100">
-                <Heading fontSize={16} mx={2} my={1}>Quick Specialist</Heading>
+        <Box>
+            <Box py="2" style={styles.quickSpecialistTopHead} backgroundColor="info.100">
+                <Heading fontSize={16} mx={2} my={1}>
+                    Quick Specialist
+                </Heading>
                 <TouchableOpacity
                     onPress={() => navigation.navigate('All')}
                 >
                     <Heading fontSize={16} mx={2} my={1}>View All</Heading>
                 </TouchableOpacity>
             </Box>
-            <View style={styles.listContainer}>
+            <Box alignItems="center" style={styles.listContainer}>
                 {
                     specialists.map((item)=>{
                         return(
@@ -43,8 +45,8 @@ const QuickSpecialist = () => {
                         )
                     })
                 }
-            </View>
-        </View>
+            </Box>
+        </Box>
     )
 }
 

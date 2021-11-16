@@ -1,4 +1,5 @@
 import { useNavigation } from '@react-navigation/native';
+import { Box } from 'native-base';
 import React from 'react'
 import { Dimensions, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import Covid19Screen from '../SpecialistScreen/Covid19Screen';
@@ -12,12 +13,13 @@ const QuickSpecialistList = (props) => {
     return (
         <TouchableOpacity
             onPress={() => navigation.navigate(item.screen)}
+            style={{marginBottom:5}}
         >
-            <View style={{width:width/4}}>
+            <Box mx="1"  style={{width:width/4.5}}>
                 <QuicSpecialistCard
                 {...item}
                 />
-            </View>
+            </Box>
         </TouchableOpacity>
     )
 }

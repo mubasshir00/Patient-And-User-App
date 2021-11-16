@@ -8,29 +8,31 @@ import PressableComponent from '../../ReusableComponents/PressableComponents/Pre
 const AddMedication = () => {
     return (
         <ScrollView
+        background="blue.100"
         >
             <FormControl 
             px="10"
             >
-                <FormControl.Label>
+                <FormControl.Label >
                     Brand Name
                 </FormControl.Label>
-                <Input/>
+                <Input borderColor="black" py="1"/>
 
-                <FormControl.Label>
+                <FormControl.Label >
                     Dose
                 </FormControl.Label>
-                <Input />
+                <Input borderColor="black" py="1"/>
 
                 <FormControl.Label>
                     Direction
                 </FormControl.Label>
-                <Input />
+                <Input borderColor="black" py="1"/>
 
                 <FormControl.Label>
                     Start Day
                 </FormControl.Label>
                 <Input 
+                    borderColor="black" py="1"
                     InputRightElement={
                         <Icon
                             as={
@@ -38,8 +40,8 @@ const AddMedication = () => {
                                     name="calendar"
                                 />
                             }
-                            size={5}
-                            color="muted.400"
+                            size={6}
+                            color="black"
                         />
                     }
                 />
@@ -48,6 +50,7 @@ const AddMedication = () => {
                     End Day
                 </FormControl.Label>
                 <Input 
+                    borderColor="black" py="1"
                 InputRightElement={
                     <Icon
                     as={
@@ -56,7 +59,7 @@ const AddMedication = () => {
                       />
                     }
                     size={5}
-                    color="muted.400"
+                    color="black"
                     />
                 }
                 />
