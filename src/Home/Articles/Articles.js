@@ -21,12 +21,11 @@ const Articles = () => {
                                source={item.image} 
                                key={index}
                                resizeMode="cover"
-                               blurRadius={6}
-                               
+                               blurRadius={3} 
                                >
                                    <TouchableOpacity style={styles.card} >
-                                       <Heading fontSize={12}>{item.title}</Heading>
-                                       <Text>{item.text}</Text>
+                                       <Heading fontSize={13}>{item.title}</Heading>
+                                       <Text fontSize={10}>{item.text}</Text>
                                    </TouchableOpacity>
                               </ImageBackground>
                            )

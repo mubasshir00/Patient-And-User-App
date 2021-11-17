@@ -1,5 +1,5 @@
 import { useNavigation } from '@react-navigation/native'
-import { Box, Text, Image, Heading, Checkbox, Icon, ScrollView, Center, Pressable } from 'native-base'
+import { Box, Text, Image, Heading, Checkbox, Icon, ScrollView, Center, Pressable, Input } from 'native-base'
 import React from 'react'
 import { StyleSheet, View } from 'react-native'
 import AntDesign from 'react-native-vector-icons/AntDesign'
@@ -78,6 +78,7 @@ const Summery = () => {
                         colorScheme="blue"
                         color="blue.700"
                         borderRadius="100"
+                        
                         icon={
                             <Icon
 
@@ -86,7 +87,8 @@ const Summery = () => {
                         }
                         defaultIsChecked
                     >
-                        <Text px="2" fontSize="15">For Other</Text>
+                        {''}
+                        <Input px="1" py="0.5" width="86%" fontSize="15"/>
                     </Checkbox>
                 </Box>
 
