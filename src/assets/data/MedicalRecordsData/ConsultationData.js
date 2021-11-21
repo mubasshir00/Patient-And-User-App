@@ -18,5 +18,10 @@ export const prescriptionData =[
         id:4,
         image:require('../../images/PrescriptionImages/4.jpg'),
         date: 'April 34, 2021'
+    },
+    {
+        id: 5,
+        image: require('../../images/PrescriptionImages/4.jpg'),
+        date: 'April 34, 2021'
     }
 ]

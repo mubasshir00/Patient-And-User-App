@@ -1,9 +1,10 @@
-import { Box,Pressable,ScrollView,Text } from 'native-base'
+import { Box,Image,Pressable,ScrollView,Text } from 'native-base'
 import React, { useEffect, useState } from 'react'
 import { StyleSheet, View } from 'react-native'
 import Profile from './Profile/Profile'
 
 import { profileData } from '../../assets/data/Profile/ProfileData'
+
 import PressableComponent from '../../ReusableComponents/PressableComponents/PressableComponent'
 
 import FontAweSome from 'react-native-vector-icons/FontAwesome'
@@ -24,21 +25,30 @@ const ProfileScreen = () => {
     }, [])
 
     console.log(image);
-    const { id, name, image, bloodgroup, height,weight} = {...profileState}
+    const { id, name, image, heartRate, bloodgroup, userHeight, age, weight, BMI, bloodPress, oxygenSaturation, latestedUpdate} = {...profileState}
+    // console.log(oxygenSaturation.PR);
     return (
-        <ScrollView backgroundColor="blue.50" py="4">
+        <ScrollView backgroundColor="#F0F4F7"  >
 
             <Profile 
             name={name} 
             image={image} 
             bloodgroup={bloodgroup} 
-            height={height} 
-            weight={weight}/>
+            userHeight={userHeight}
+            weight={weight}
+            BMI={BMI}
+            bloodPress={bloodPress}
+            oxygenSaturation={oxygenSaturation}
+            age={age}
+            latestedUpdate={latestedUpdate}
+                heartRate={heartRate}
+            />
 
 
             <PressableComponent
                 mx="3" py="2"
-                px="3" my="2"
+                px="3"
+                mt="4" mb="2"
                 fontSize="18"
                 alignItems="center"
                 bgPressed="white"
@@ -46,6 +56,7 @@ const ProfileScreen = () => {
                 rounded="8"
             >
                 <Box
+                
                     flexDirection="row"
                     color="black"
                     fontWeight="bold"
@@ -54,7 +65,12 @@ const ProfileScreen = () => {
                     justifyContent="space-between"
                 >
                     <Box flexDirection="row" alignItems="center">
-                        <FontAweSome5 name="hand-holding-medical" style={[styles.icon, { fontSize: 15, textAlign: 'center', alignItems: 'center' }]} />
+                        {/* <FontAweSome5 name="hand-holding-medical" style={[styles.icon, { fontSize: 15, textAlign: 'center', alignItems: 'center' }]} /> */}
+                        <Image source={require('../../assets/images/ProfileScreenImage/medications.png')}
+                        alt="Medication"
+                        size={30}
+                        resizeMode="contain"
+                        />
                         {`  `}
                         <Text color="black">Medication</Text>
                     </Box>
@@ -81,7 +97,11 @@ const ProfileScreen = () => {
             justifyContent="space-between"
             >
                 <Box flexDirection="row">
-                    <FontAweSome  name="user-circle-o" style={styles.icon} />
+                        <Image source={require('../../assets/images/ProfileScreenImage/profile.png')}
+                            alt="Medication"
+                            size={30}
+                            resizeMode="contain"
+                        />
                     <Box>{`   `}</Box>
                     <Text color="black">Personal Information</Text>
                 </Box>
@@ -108,10 +128,12 @@ const ProfileScreen = () => {
                     justifyContent="space-between"
                 >
                     <Box  flexDirection="row">
-                        <FontAweSome5
-                        name="notes-medical" 
-                        style={styles.icon}/>
-                        {`    `}
+                        <Image source={require('../../assets/images/ProfileScreenImage/vital-signs.png')}
+                            alt="Medication"
+                            size={30}
+                            resizeMode="contain"
+                        />
+                        {'   '}
                         <Text color="black">My Vitals</Text>
                     </Box>
                     <FontAweSome name="chevron-right" style={styles.icon} />
@@ -159,9 +181,15 @@ const ProfileScreen = () => {
                     alignItems="center"
                     fontSize="19"
                     justifyContent="space-between"
+                    mb="2"
+                    borderRadius="10"
                 >
                     <Box flexDirection="row" alignItems="center">
-                        <FontAweSome5 name="money-check" style={[styles.icon, { fontSize: 15 ,textAlign:'center',alignItems:'center' }]} />
+                        <Image source={require('../../assets/images/ProfileScreenImage/money-transfer.png')}
+                            alt="Medication"
+                            size={30}
+                            resizeMode="contain"
+                        />
                         {`  `}
                         <Text color="black">Transaction History</Text>
                     </Box>

@@ -5,7 +5,7 @@ import MedicalRecords from './MedicalRecords/MedicalRecords'
 
 const MedicalRecord = () => {
     return (
-        <ScrollView backgroundColor="blue.100" >
+        <ScrollView backgroundColor="#F0F4F7" >
             <MedicalRecords/>
         </ScrollView>
     )

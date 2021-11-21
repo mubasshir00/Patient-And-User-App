@@ -12,14 +12,28 @@ const Summery = () => {
     const navigation = useNavigation()
 
     return (
-        <Box background="white" flex="1">
+        <Box background="#F0F4F7" flex="1">
 
-            <Box background="blue.100" px="2" py="2.5" borderRadius="10" mx="4">
+            <Box background="white" mt="4" px="2" py="2.5" borderRadius="10" mx="4">
                 <ProfileCard />
+            </Box>
+
+            <Box 
+            background="white" 
+            mt="4" mx="4"
+            px="2" py="1" 
+            borderRadius="10" 
+            flexDirection="row" alignItems="center"
+            justifyContent="space-between"
+            >
+                <Text fontWeight="bold">Payment Total</Text>
+                <Box flexDirection="row" alignItems="center">
+                    <Text>BDT </Text>
+                    <Text fontSize="22" color="#5099F3" fontWeight="bold">200</Text>
+                </Box>
             </Box>
             
             <ScrollView
-            background="blue.100"
             p="4"
             mt="4"
             mx="4"
@@ -47,12 +61,12 @@ const Summery = () => {
                     <Heading fontSize="16">Wed 10:30 AM</Heading>
                 </Box>
 
-                <Box pb="2">
+                <Box pb="4">
                 <Heading fontSize="18">Patient Details</Heading>
-                 <Text>select patient for consultation</Text>
+                 <Text color="grey">select patient for consultation</Text>
                 </Box>
 
-                <Box background="white" padding="2">
+                <Box my="2" background="white" padding="2">
                     <Checkbox
                     value="blue"
                     size="md"
@@ -67,7 +81,7 @@ const Summery = () => {
                     }
                     defaultIsChecked
                     >
-                        <Text px="2" fontSize="15">Saima Akter</Text>
+                        <Text px="2" fontSize="15">Shane Bryant</Text>
                     </Checkbox>
                 </Box>
 
@@ -103,7 +117,7 @@ const Summery = () => {
                 {({ isHovered, isFocused, isPressed }) => {
                     return (
                         <Box
-                            bg={isPressed ? "blue.400" : isHovered ? "blue.300" : "blue.500"}
+                            bg={isPressed ? "blue.400" : isHovered ? "blue.300" : "#5099F3"}
                             py="2"
                             mx="4"
                             my="1"

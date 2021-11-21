@@ -5,13 +5,16 @@ import { Dimensions, ScrollView, StyleSheet, TouchableOpacity, View } from 'reac
 
 import FontAweSome from 'react-native-vector-icons/FontAwesome'
 import Entypo from 'react-native-vector-icons/Entypo'
+import Ionicons from 'react-native-vector-icons/Ionicons'
+import AntDesign from 'react-native-vector-icons/AntDesign'
 
 const { width, height } = Dimensions.get('window')
+const ratingAv = 4
 
 //here props come from DoctorList 
 const SingleSpecialist = (props) => {
     const [specialist, setSpecialist] = useState(props.route.params)
-    const { name, title, cost, rating, detailsAddress, patients, experience, time, timeZone, fee, speciality, registration, medicalExperience, schedule } = specialist
+    const { name, title, image, cost, rating, detailsAddress, patients, experience, time, timeZone, fee, speciality, registration, medicalExperience, schedule } = specialist
     
     const navigation = useNavigation()
 
@@ -23,9 +26,9 @@ const SingleSpecialist = (props) => {
         >
             <ScrollView >
                 <Image
-                    source={require('../assets/images/doctor.jpg')}
+                    source={{uri:image}}
                     // size="2xl"
-                    resizeMode="cover"
+                    resizeMode="contain"
                     alt="image"
                     height={height / 4.3}
                 />
@@ -38,14 +41,17 @@ const SingleSpecialist = (props) => {
                 >
                     <Flex
                     >
-                        <Heading fontSize={18}>{name}</Heading>
-                        <Text>{title}</Text>
-                        <Text marginTop="2" fontSize="15" color="gray.500" fontWeight="bold">{detailsAddress}</Text>
+                        <Heading fontSize={18}>Dr {name}</Heading>
+                        <Text ml="4" fontSize="12">{title}</Text>
+                        <Box marginTop="2" flexDirection="row" alignItems="center">
+                            <Ionicons name="location" size={20} color="#5099F3"/>
+                            <Text fontSize="13" color="gray.500" fontWeight="bold">{detailsAddress}</Text>
+                        </Box>
                     </Flex>
                     <Spacer />
                     <Box flexDirection="row">
                         <Box mx="1" 
-                        background="blue.600"
+                        background="#5099F3"
                         px="3"
                         py="2" 
                         borderRadius="100"
@@ -53,7 +59,7 @@ const SingleSpecialist = (props) => {
                             <FontAweSome color="white" name="phone" size={25} />
                         </Box>
                         <Box mx="1"
-                            background="blue.600"
+                            background="#5099F3"
                             px="2"
                             py="2"
                             borderRadius="100"
@@ -61,7 +67,7 @@ const SingleSpecialist = (props) => {
                             <FontAweSome color="white" name="video-camera" size={25} />
                         </Box>
                         <Box mx="1"
-                            background="blue.600"
+                            background="#5099F3"
                             px="2"
                             py="2"
                             borderRadius="100"
@@ -77,33 +83,72 @@ const SingleSpecialist = (props) => {
                     py={2}
                 >
                     <Box
-                        backgroundColor="blue.100"
+                        backgroundColor="#F0F4F7"
                         padding="2"
                         alignItems="center"
-                        width={width / 4}
+                        width={width / 3.7}
                         borderRadius="10"
                     >
                         <Text 
                         fontWeight="bold"
-                        color="blue.500"
+                        color="grey"
+                        fontSize="11"
                         >PATIENTS</Text>
-                        <Text style={[styles.fontColor]}>{patients}+</Text>
+                        <Text fontSize="19" style={[styles.fontColor]}>{patients}+</Text>
                     </Box>
                     <Box
-                        backgroundColor="blue.100"
+                        backgroundColor="#F0F4F7"
                         padding="2"
                         alignItems="center"
-                        width={width / 4}
+                        width={width / 3.7}
                         borderRadius="10"
                     >
                         <Text 
-                        fontWeight="bold"
-                        color="blue.500"
+                            fontWeight="bold"
+                            color="grey"
+                            fontSize="11"
+                            pb="2"
                         >RATINGS</Text>
-                        <Text style={[styles.fontColor]}>{rating}</Text>
+
+                       <Box>
+
+                            <Box flexDirection="row">
+
+                                <Box flexDirection="row">
+                                    {
+                                        Array(ratingAv).fill().map((_, i) => (
+                                            <Box key={i}>
+                                                <AntDesign
+                                                    name="star"
+                                                    color="orange"
+                                                    size={13}
+                                                />
+                                            </Box>
+                                        ))
+                                    }
+                                </Box>
+
+                                <Box flexDirection="row">
+                                    {
+                                        Array(5 - ratingAv).fill().map((_, i) => (
+                                            <Box key={i}>
+                                                <AntDesign
+                                                    name="staro"
+                                                    size={13}
+                                                />
+                                            </Box>
+                                        ))
+                                    }
+                                </Box>
+
+                            </Box>
+
+                        </Box>
+
+                        {/* <Text fontSize="19" style={[styles.fontColor]}>{rating}</Text> */}
                     </Box>
                     <Box
-                        backgroundColor="blue.100"
+                        backgroundColor="#F0F4F7"
                         py="2"
                         alignItems="center"
                         width={width / 3.7}
@@ -111,9 +156,10 @@ const SingleSpecialist = (props) => {
                     >
                         <Text 
                             fontWeight="bold"
-                            color="blue.500"
+                            color="grey"
+                            fontSize="11"
                         >EXPERIENCE</Text>
-                        <Text style={[styles.fontColor]}>{experience} Years</Text>
+                        <Text fontSize="19" style={[styles.fontColor]}>{experience} Years</Text>
                     </Box>
                 </Box>
                 <Box
@@ -124,16 +170,20 @@ const SingleSpecialist = (props) => {
                     my="3"
                 >
                     <Box
-                        backgroundColor="blue.100"
+                        backgroundColor="#F0F4F7"
                         px="1" py="1.5"
                     >
-                        <Text color="black" fontWeight="bold">Next Available Slot : <Text color="blue.400" fontWeight="bold">{time}</Text> <Text color="blue.400" fontWeight="bold">{timeZone}</Text> Today </Text>
+                        <Text color="black" >Next Available Slot : <Text color="#5099F3" fontWeight="bold"
+                        fontSize="18"
+                        >{time}</Text> 
+                        <Text fontSize="18" color="#5099F3" fontWeight="bold">{timeZone}</Text> Today </Text>
                     </Box>
                     <Box
-                        backgroundColor="blue.100"
-                        px="1.5" py="1.5"
+                        backgroundColor="#F0F4F7"
+                        px="1" py="1.5"
+                        alignItems="center"
                     >
-                        <Text color="black" fontWeight="bold">Fee : <Text color="blue.400" fontWeight="bold">{cost}$</Text> </Text>
+                        <Text color="black" >Fee : <Text color="#5099F3" fontWeight="bold" fontSize="18">{cost}$</Text> </Text>
                     </Box>
                 </Box>
                 <Box
@@ -177,7 +227,7 @@ const SingleSpecialist = (props) => {
                 })
             }
             >
-                <Center background="blue.500" mx="3" py="2">
+                <Center background="#5099F3" mx="3" py="2">
                     <Text color="white" fontWeight="bold">Book Appointment</Text>
                 </Center>
             </TouchableOpacity>

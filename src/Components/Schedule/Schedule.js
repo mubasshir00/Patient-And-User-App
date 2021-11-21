@@ -15,81 +15,78 @@ const Schedule = props => {
   const navigation = useNavigation();
   return (
     <ScrollView background="white">
-      <Box background="blue.100" px="2" py="2.5" m="4">
+      <Box background="#F0F4F7" px="2" py="2.5" m="4" borderRadius="10">
         <ProfileCard />
       </Box>
       <Calender />
-      <Box px="4">
-        <Heading>Morning</Heading>
+      <Box py="2" px="4">
+        <Heading py="2">Morning</Heading>
         <Box>
-                  <Box flexDirection="row" justifyContent="space-between" my="1">
-                      {schedule.Morning.slice(3).map(item => {
-                          return (
-                              <Pressable
-                                  key={item.id}
-                              >
-                                  {({ isHovered, isFocused, isPressed }) => {
-                                      return (
-                                          <Box
-                                              bg={isPressed ? "blue.300" : isHovered ? "blue.200" : ""}
-
-                                              borderColor="black"
-                                              borderWidth="1"
-                                              alignItems="center"
-                                              borderRadius="10"
-                                              // px="4"
-                                              py="1.5"
-                                              width={width / 3.5}>
-                                              <Text>{item.morningTime}</Text>
-                                          </Box>
-                                      );
-                                  }}
-                              </Pressable>
-                          );
-                      })}
-                  </Box>
-                  <Box flexDirection="row" justifyContent="space-between" my="1">
-                      {schedule.Morning.slice(-3).map(item => {
-                          return (
-                              <Pressable
-                                  key={item.id}
-                              >
-                                  {({ isHovered, isFocused, isPressed }) => {
-                                      return (
-                                          <Box
-                                              bg={isPressed ? "blue.300" : isHovered ? "blue.200" : ""}
-
-                                              borderColor="black"
-                                              borderWidth="1"
-                                              alignItems="center"
-                                              borderRadius="10"
-                                              // px="4"
-                                              py="1.5"
-                                              width={width / 3.5}>
-                                              <Text>{item.morningTime}</Text>
-                                          </Box>
-                                      );
-                                  }}
-                              </Pressable>
-                          );
-                      })}
-                  </Box>
+          <Box flexDirection="row" justifyContent="space-between" my="1">
+            {schedule.Morning.slice(3).map(item => {
+              return (
+                <Pressable key={item.id}>
+                  {({isHovered, isFocused, isPressed}) => {
+                    return (
+                      <Box
+                        bg={
+                          isPressed ? '#5099F3' : isHovered ? '#5099F3' : ''
+                        }
+                        borderColor="black"
+                        borderWidth="1"
+                        alignItems="center"
+                        borderRadius="10"
+                        // px="4"
+                        py="1.5"
+                        width={width / 3.5}>
+                        <Text>{item.morningTime}</Text>
+                      </Box>
+                    );
+                  }}
+                </Pressable>
+              );
+            })}
+          </Box>
+          <Box flexDirection="row" justifyContent="space-between" mt="2">
+            {schedule.Morning.slice(-3).map(item => {
+              return (
+                <Pressable key={item.id}>
+                  {({isHovered, isFocused, isPressed}) => {
+                    return (
+                      <Box
+                        bg={
+                          isPressed ? '#5099F3' : isHovered ? '#5099F3' : ''
+                        }
+                        borderColor="black"
+                        borderWidth="1"
+                        alignItems="center"
+                        borderRadius="10"
+                        // px="4"
+                        py="1.5"
+                        width={width / 3.5}>
+                        <Text>{item.morningTime}</Text>
+                      </Box>
+                    );
+                  }}
+                </Pressable>
+              );
+            })}
+          </Box>
         </Box>
       </Box>
-      <Box px="4">
-        <Heading>Evening</Heading>
+      <Box py="2" px="4">
+        <Heading py="2">Evening</Heading>
         <Box>
           <Box flexDirection="row" justifyContent="space-between" my="1">
             {schedule.Evening.slice(3).map(item => {
               return (
-                <Pressable
-                key={item.id}
-                >
+                <Pressable key={item.id}>
                   {({isHovered, isFocused, isPressed}) => {
                     return (
                       <Box
-                        bg={isPressed ? "blue.300" : isHovered ? "blue.200":""}
-                        
+                        bg={
+                          isPressed ? '#5099F3' : isHovered ? '#5099F3' : ''
+                        }
                         borderColor="black"
                         borderWidth="1"
                         alignItems="center"
@@ -105,29 +102,31 @@ const Schedule = props => {
               );
             })}
           </Box>
-                  <Box flexDirection="row" justifyContent="space-between" my="1">
-                      {schedule.Evening.slice(-3).map(item => {
-                          return (
-                              <Pressable key={item.id}>
-                                  {({ isHovered, isFocused, isPressed }) => {
-                                      return (
-                                          <Box
-                                              bg={isPressed ? "blue.300" : isHovered ? "blue.200" : ""}
-                                              borderColor="black"
-                                              borderWidth="1"
-                                              alignItems="center"
-                                              borderRadius="10"
-                                              // px="4"
-                                              py="1.5"
-                                              width={width / 3.5}>
-                                              <Text>{item.eveningTime}</Text>
-                                          </Box>
-                                      );
-                                  }}
-                              </Pressable>
-                          );
-                      })}
-                  </Box>
+          <Box flexDirection="row" justifyContent="space-between" mt="2">
+            {schedule.Evening.slice(-3).map(item => {
+              return (
+                <Pressable key={item.id}>
+                  {({isHovered, isFocused, isPressed}) => {
+                    return (
+                      <Box
+                        bg={
+                          isPressed ? '#5099F3' : isHovered ? '#5099F3' : ''
+                        }
+                        borderColor="black"
+                        borderWidth="1"
+                        alignItems="center"
+                        borderRadius="10"
+                        // px="4"
+                        py="1.5"
+                        width={width / 3.5}>
+                        <Text>{item.eveningTime}</Text>
+                      </Box>
+                    );
+                  }}
+                </Pressable>
+              );
+            })}
+          </Box>
         </Box>
       </Box>
       <Pressable
@@ -138,7 +137,7 @@ const Schedule = props => {
         {({isHovered, isFocused, isPressed}) => {
           return (
             <Box
-              bg={isPressed ? 'blue.400' : isHovered ? 'blue.300' : 'blue.500'}
+              bg={isPressed ? 'blue.400' : isHovered ? 'blue.300' : '#5099F3'}
               py="2"
               mx="4"
               my="2"

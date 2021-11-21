@@ -18,6 +18,8 @@ const PressableComponent = ({children,...props}) => {
                     px={props.px}
                     mx={props.mx}
                     my={props.my}
+                    mt={props.mt}
+                    mb={props.mb}
                     width={props.width}
                     // alignItems="flex-start"
                     // alignItems={props.alignItems}

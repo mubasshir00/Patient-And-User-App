@@ -38,7 +38,7 @@ const MedicalRecords = () => {
                       flexDirection="row"
                       alignItems="center"
                       justifyContent="space-between"
-                      bg={isPressed ? 'white' : isHovered ? 'blue.100' : 'blue.100'}
+                      bg={isPressed ? 'blue.100' : isHovered ? 'blue.100' : 'white'}
                         py="1" px="2"
                         borderRadius="10"
                       >

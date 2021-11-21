@@ -20,7 +20,7 @@ const Medication = () => {
     const [routes, setRoutes] = useState([
         { key: 'CurrentMedication', title1: 'Current', title2:'Medication'},
         { key: 'StopedMedication', title1: 'Stopped', title2: 'Medication'},
-        { key: 'AddMedication', title1: 'Add', title2: 'Medicine'}
+        // { key: 'AddMedication', title1: 'Add', title2: 'Medicine'}
     ])
 
     const renderTabBar = (props) =>{

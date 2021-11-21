@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
 import 'react-native-gesture-handler'
@@ -9,15 +9,21 @@ import { Box, NativeBaseProvider } from 'native-base'
 import AuthScreen from './src/Screen/AuthScreen'
 
 const App = () => {
-  const isLogin = false
+
+  const [isLogin, setisLogin] = useState(true)
+
+  const checkLogin = () =>{
+    
+  }
+
   return (
     <NativeBaseProvider>
       <NavigationContainer>
         {
-          isLogin ? <AuthScreen /> : <Box style={styles.container}>
+          isLogin ? <Box style={styles.container}>
             {/* <QuickSpecialist/> */}
             <Main />
-          </Box>
+          </Box> : <AuthScreen />
         }
       </NavigationContainer>
     </NativeBaseProvider>

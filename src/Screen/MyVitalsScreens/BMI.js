@@ -2,13 +2,17 @@ import { Box ,Center,Heading,ScrollView,Text} from 'native-base'
 import React from 'react'
 import { StyleSheet, View } from 'react-native'
 import { bmi } from '../../assets/data/MyVitals/MyVitalsData'
+import BMILineChart from './BMILineChart'
 
 const BMI = () => {
     return (
         <ScrollView background="blue.100">
             <Center
             pt="3"
-            ><Heading>BMI Report</Heading></Center>
+            >
+                {/* <Heading>BMI Report</Heading> */}
+            </Center>
+            <BMILineChart/>
             <Box>
                 {
                     bmi.map((item)=>{

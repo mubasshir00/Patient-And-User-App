@@ -21,11 +21,13 @@ const Articles = () => {
                                source={item.image} 
                                key={index}
                                resizeMode="cover"
-                               blurRadius={3} 
+                               height="500"
+                            //    blurRadius={3} 
                                >
                                    <TouchableOpacity style={styles.card} >
-                                       <Heading fontSize={13}>{item.title}</Heading>
-                                       <Text fontSize={10}>{item.text}</Text>
+                                       {/* <Heading fontSize={13}>{item.title}</Heading>
+                                       <Text fontSize={10}>{item.text}</Text> */}
+                                       <Text>.</Text>
                                    </TouchableOpacity>
                               </ImageBackground>
                            )
@@ -43,6 +45,7 @@ const styles = StyleSheet.create({
         backgroundColor:'transparent',
         padding:10,
         width:width/3.3,
+        height:width/3,
         margin:4,
         color:'black',
         borderRadius:100

@@ -15,12 +15,5 @@ export const medicalRecords =[
         "isNew":false,
         "name":"Lab Report"
     },
-    {
-        "id":"3",
-        "title":"Emails",
-        image:require('../images/email.png'),
-        "count":3,
-        "isNew":false,
-        "name":"Emails"
-    }
+    
 ]

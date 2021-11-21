@@ -1,422 +1,428 @@
 [
-    {
-        "id":"1",
-        "name":"Rashed Khan",
-        "title":"Covid Sergeon, Dhaka",
-        "detailsAddress":"Azimpur Dhaka",
-        "cost":"200",
-        "patients":"301",
-        "rating":"5",
-        "experience":"6",
-        "time":"6:30",
-        "timeZone":"PM",
-        "fee":"200",
-        "speciality":"Cardiologist",
-        "registration":"A66003",
-        "medicalExperience":"3",
-        "schedule":{
-            "Morning":[
-                {
-                    "id":"1",
-                    "morningTime":"9.30 AM"
-                },
-                {
-                    "id":"2",
-                    "morningTime":"10.00 AM"
-                },
-                {
-                    "id":"3",
-                    "morningTime":"10.30 AM"
-                },
-                {
-                    "id":"4",
-                    "morningTime":"11.00 AM"
-                },
-                {
-                    "id":"5",
-                    "morningTime":"11.30 AM"
-                },
-                {
-                    "id":"6",
-                    "morningTime":"12.00 AM"
-                }
-            ],
-            "Evening":[
-                {
-                    "id":"1",
-                    "eveningTime":"6.30 AM"
-                },
-                {
-                    "id":"2",
-                    "eveningTime":"7.30 AM"
-                },
-                {
-                    "id":"3",
-                    "eveningTime":"8.30 AM"
-                },
-                {
-                    "id":"4",
-                    "eveningTime":"6.00 AM"
-                },
-                {
-                    "id":"5",
-                    "eveningTime":"7.30 AM"
-                },
-                {
-                    "id":"6",
-                    "eveningTime":"8.00 AM"
-                }
-            ]
+  {
+    "id": "1",
+    "name": "Toby Hart",
+    "title": "Covid Sergeon, Dhaka",
+    "detailsAddress":"Sonergaon Janapath, 1230 Dhaka,",
+    "image": "https://i.pinimg.com/564x/0d/ef/10/0def1027ce5a73e8483fb3a62a0e4aa0.jpg",
+    "cost": "200",
+    "patients": "301",
+    "rating": "5.00",
+    "experience": "6",
+    "time": "6:30",
+    "timeZone": "PM",
+    "fee": "200",
+    "speciality": "Cardiologist",
+    "registration": "A66003",
+    "medicalExperience": "3",
+    "schedule": {
+      "Morning": [
+        {
+          "id": "1",
+          "morningTime": "9.30 AM"
+        },
+        {
+          "id": "2",
+          "morningTime": "10.00 AM"
+        },
+        {
+          "id": "3",
+          "morningTime": "10.30 AM"
+        },
+        {
+          "id": "4",
+          "morningTime": "11.00 AM"
+        },
+        {
+          "id": "5",
+          "morningTime": "11.30 AM"
+        },
+        {
+          "id": "6",
+          "morningTime": "12.00 AM"
         }
-    },
-    {
-        "id":"2",
-        "name":"Rashed Khan",
-        "title":"Covid Sergeon, Dhaka",
-        "detailsAddress":"Azimpur Dhaka",
-        "cost":"200",
-        "patients":"301",
-        "rating":"5",
-        "experience":"6",
-        "time":"6:30",
-        "timeZone":"PM",
-        "fee":"200",
-        "speciality":"Cardiologist",
-        "registration":"A66003",
-        "medicalExperience":"3",
-        "schedule":{
-            "Morning":[
-                {
-                    "id":"1",
-                    "morningTime":"9.30 AM"
-                },
-                {
-                    "id":"2",
-                    "morningTime":"10.00 AM"
-                },
-                {
-                    "id":"3",
-                    "morningTime":"10.30 AM"
-                },
-                {
-                    "id":"4",
-                    "morningTime":"11.00 AM"
-                },
-                {
-                    "id":"5",
-                    "morningTime":"11.30 AM"
-                },
-                {
-                    "id":"6",
-                    "morningTime":"12.00 AM"
-                }
-            ],
-            "Evening":[
-                {
-                    "id":"1",
-                    "eveningTime":"6.30 AM"
-                },
-                {
-                    "id":"2",
-                    "eveningTime":"7.30 AM"
-                },
-                {
-                    "id":"3",
-                    "eveningTime":"8.30 AM"
-                },
-                {
-                    "id":"4",
-                    "eveningTime":"6.00 AM"
-                },
-                {
-                    "id":"5",
-                    "eveningTime":"7.30 AM"
-                },
-                {
-                    "id":"6",
-                    "eveningTime":"8.00 AM"
-                }
-            ]
+      ],
+      "Evening": [
+        {
+          "id": "1",
+          "eveningTime": "6.30 AM"
+        },
+        {
+          "id": "2",
+          "eveningTime": "7.30 AM"
+        },
+        {
+          "id": "3",
+          "eveningTime": "8.30 AM"
+        },
+        {
+          "id": "4",
+          "eveningTime": "6.00 AM"
+        },
+        {
+          "id": "5",
+          "eveningTime": "7.30 AM"
+        },
+        {
+          "id": "6",
+          "eveningTime": "8.00 AM"
         }
-    },
-    {
-        "id":"3",
-        "name":"Rashed Khan",
-        "title":"Covid Sergeon, Dhaka",
-        "detailsAddress":"Azimpur Dhaka",
-        "cost":"200",
-        "patients":"301",
-        "rating":"5",
-        "experience":"6",
-        "time":"6:30",
-        "timeZone":"PM",
-        "fee":"200",
-        "speciality":"Cardiologist",
-        "registration":"A66003",
-        "medicalExperience":"3",
-        "schedule":{
-            "Morning":[
-                {
-                    "id":"1",
-                    "morningTime":"9.30 AM"
-                },
-                {
-                    "id":"2",
-                    "morningTime":"10.00 AM"
-                },
-                {
-                    "id":"3",
-                    "morningTime":"10.30 AM"
-                },
-                {
-                    "id":"4",
-                    "morningTime":"11.00 AM"
-                },
-                {
-                    "id":"5",
-                    "morningTime":"11.30 AM"
-                },
-                {
-                    "id":"6",
-                    "morningTime":"12.00 AM"
-                }
-            ],
-            "Evening":[
-                {
-                    "id":"1",
-                    "eveningTime":"6.30 AM"
-                },
-                {
-                    "id":"2",
-                    "eveningTime":"7.30 AM"
-                },
-                {
-                    "id":"3",
-                    "eveningTime":"8.30 AM"
-                },
-                {
-                    "id":"4",
-                    "eveningTime":"6.00 AM"
-                },
-                {
-                    "id":"5",
-                    "eveningTime":"7.30 AM"
-                },
-                {
-                    "id":"6",
-                    "eveningTime":"8.00 AM"
-                }
-            ]
-        }
-    },
-    {
-        "id":"4",
-        "name":"Rashed Khan",
-        "title":"Covid Sergeon, Dhaka",
-        "detailsAddress":"Azimpur Dhaka",
-        "cost":"200",
-        "patients":"301",
-        "rating":"5",
-        "experience":"6",
-        "time":"6:30",
-        "timeZone":"PM",
-        "fee":"200",
-        "speciality":"Cardiologist",
-        "registration":"A66003",
-        "medicalExperience":"3",
-        "schedule":{
-            "Morning":[
-                {
-                    "id":"1",
-                    "morningTime":"9.30 AM"
-                },
-                {
-                    "id":"2",
-                    "morningTime":"10.00 AM"
-                },
-                {
-                    "id":"3",
-                    "morningTime":"10.30 AM"
-                },
-                {
-                    "id":"4",
-                    "morningTime":"11.00 AM"
-                },
-                {
-                    "id":"5",
-                    "morningTime":"11.30 AM"
-                },
-                {
-                    "id":"6",
-                    "morningTime":"12.00 AM"
-                }
-            ],
-            "Evening":[
-                {
-                    "id":"1",
-                    "eveningTime":"6.30 AM"
-                },
-                {
-                    "id":"2",
-                    "eveningTime":"7.30 AM"
-                },
-                {
-                    "id":"3",
-                    "eveningTime":"8.30 AM"
-                },
-                {
-                    "id":"4",
-                    "eveningTime":"6.00 AM"
-                },
-                {
-                    "id":"5",
-                    "eveningTime":"7.30 AM"
-                },
-                {
-                    "id":"6",
-                    "eveningTime":"8.00 AM"
-                }
-            ]
-        }
-    },
-    {
-        "id":"5",
-        "name":"Rashed Khan",
-        "title":"Covid Sergeon, Dhaka",
-        "detailsAddress":"Azimpur Dhaka",
-        "cost":"200",
-        "patients":"301",
-        "rating":"5",
-        "experience":"6",
-        "time":"6:30",
-        "timeZone":"PM",
-        "fee":"200",
-        "speciality":"Cardiologist",
-        "registration":"A66003",
-        "medicalExperience":"3",
-        "schedule":{
-            "Morning":[
-                {
-                    "id":"1",
-                    "morningTime":"9.30 AM"
-                },
-                {
-                    "id":"2",
-                    "morningTime":"10.00 AM"
-                },
-                {
-                    "id":"3",
-                    "morningTime":"10.30 AM"
-                },
-                {
-                    "id":"4",
-                    "morningTime":"11.00 AM"
-                },
-                {
-                    "id":"5",
-                    "morningTime":"11.30 AM"
-                },
-                {
-                    "id":"6",
-                    "morningTime":"12.00 AM"
-                }
-            ],
-            "Evening":[
-                {
-                    "id":"1",
-                    "eveningTime":"6.30 AM"
-                },
-                {
-                    "id":"2",
-                    "eveningTime":"7.30 AM"
-                },
-                {
-                    "id":"3",
-                    "eveningTime":"8.30 AM"
-                },
-                {
-                    "id":"4",
-                    "eveningTime":"6.00 AM"
-                },
-                {
-                    "id":"5",
-                    "eveningTime":"7.30 AM"
-                },
-                {
-                    "id":"6",
-                    "eveningTime":"8.00 AM"
-                }
-            ]
-        }
-    },
-    {
-        "id":"6",
-        "name":"Rashed Khan",
-        "title":"Covid Sergeon, Dhaka",
-        "detailsAddress":"Azimpur Dhaka",
-        "cost":"200",
-        "patients":"301",
-        "rating":"5",
-        "experience":"6",
-        "time":"6:30",
-        "timeZone":"PM",
-        "fee":"200",
-        "speciality":"Cardiologist",
-        "registration":"A66003",
-        "medicalExperience":"3",
-        "schedule":{
-            "Morning":[
-                {
-                    "id":"1",
-                    "morningTime":"9.30 AM"
-                },
-                {
-                    "id":"2",
-                    "morningTime":"10.00 AM"
-                },
-                {
-                    "id":"3",
-                    "morningTime":"10.30 AM"
-                },
-                {
-                    "id":"4",
-                    "morningTime":"11.00 AM"
-                },
-                {
-                    "id":"5",
-                    "morningTime":"11.30 AM"
-                },
-                {
-                    "id":"6",
-                    "morningTime":"12.00 AM"
-                }
-            ],
-            "Evening":[
-                {
-                    "id":"1",
-                    "eveningTime":"6.30 AM"
-                },
-                {
-                    "id":"2",
-                    "eveningTime":"7.30 AM"
-                },
-                {
-                    "id":"3",
-                    "eveningTime":"8.30 AM"
-                },
-                {
-                    "id":"4",
-                    "eveningTime":"6.00 AM"
-                },
-                {
-                    "id":"5",
-                    "eveningTime":"7.30 AM"
-                },
-                {
-                    "id":"6",
-                    "eveningTime":"8.00 AM"
-                }
-            ]
-        }
+      ]
     }
+  },
+  {
+    "id": "2",
+    "name": "Hazel Nunez",
+    "title": "Covid Sergeon, Dhaka",
+    "detailsAddress": "Azimpur Dhaka",
+    "image":"https://i.pinimg.com/564x/1a/11/01/1a11011553edf682ab249aec3c09462c.jpg",
+    "cost": "200",
+    "patients": "301",
+    "rating": "5",
+    "experience": "6",
+    "time": "6:30",
+    "timeZone": "PM",
+    "fee": "200",
+    "speciality": "Cardiologist",
+    "registration": "A66003",
+    "medicalExperience": "3",
+    "schedule": {
+      "Morning": [
+        {
+          "id": "1",
+          "morningTime": "9.30 AM"
+        },
+        {
+          "id": "2",
+          "morningTime": "10.00 AM"
+        },
+        {
+          "id": "3",
+          "morningTime": "10.30 AM"
+        },
+        {
+          "id": "4",
+          "morningTime": "11.00 AM"
+        },
+        {
+          "id": "5",
+          "morningTime": "11.30 AM"
+        },
+        {
+          "id": "6",
+          "morningTime": "12.00 AM"
+        }
+      ],
+      "Evening": [
+        {
+          "id": "1",
+          "eveningTime": "6.30 AM"
+        },
+        {
+          "id": "2",
+          "eveningTime": "7.30 AM"
+        },
+        {
+          "id": "3",
+          "eveningTime": "8.30 AM"
+        },
+        {
+          "id": "4",
+          "eveningTime": "6.00 AM"
+        },
+        {
+          "id": "5",
+          "eveningTime": "7.30 AM"
+        },
+        {
+          "id": "6",
+          "eveningTime": "8.00 AM"
+        }
+      ]
+    }
+  },
+  {
+    "id": "3",
+    "name": "Traci Mendez",
+    "title": "Covid Sergeon, Dhaka",
+    "detailsAddress":"Lalbugh, 1211 Dhaka",
+    "image":"https://i.pinimg.com/564x/99/47/8f/99478f0d89e3688579244235c61f3f27.jpg",
+    "cost": "200",
+    "patients": "301",
+    "rating": "5",
+    "experience": "6",
+    "time": "6:30",
+    "timeZone": "PM",
+    "fee": "200",
+    "speciality": "Cardiologist",
+    "registration": "A66003",
+    "medicalExperience": "3",
+    "schedule": {
+      "Morning": [
+        {
+          "id": "1",
+          "morningTime": "9.30 AM"
+        },
+        {
+          "id": "2",
+          "morningTime": "10.00 AM"
+        },
+        {
+          "id": "3",
+          "morningTime": "10.30 AM"
+        },
+        {
+          "id": "4",
+          "morningTime": "11.00 AM"
+        },
+        {
+          "id": "5",
+          "morningTime": "11.30 AM"
+        },
+        {
+          "id": "6",
+          "morningTime": "12.00 AM"
+        }
+      ],
+      "Evening": [
+        {
+          "id": "1",
+          "eveningTime": "6.30 AM"
+        },
+        {
+          "id": "2",
+          "eveningTime": "7.30 AM"
+        },
+        {
+          "id": "3",
+          "eveningTime": "8.30 AM"
+        },
+        {
+          "id": "4",
+          "eveningTime": "6.00 AM"
+        },
+        {
+          "id": "5",
+          "eveningTime": "7.30 AM"
+        },
+        {
+          "id": "6",
+          "eveningTime": "8.00 AM"
+        }
+      ]
+    }
+  },
+  {
+    "id": "4",
+    "name": "Mabel Phillips",
+    "title": "Covid Sergeon, Dhaka",
+    "detailsAddress":"Rampura,Dhaka",
+    "image":"https://i.pinimg.com/564x/d1/ea/33/d1ea33482f2a879e4db3df3cf353cd31.jpg",
+    "cost": "200",
+    "patients": "301",
+    "rating": "5",
+    "experience": "6",
+    "time": "6:30",
+    "timeZone": "PM",
+    "fee": "200",
+    "speciality": "Cardiologist",
+    "registration": "A66003",
+    "medicalExperience": "3",
+    "schedule": {
+      "Morning": [
+        {
+          "id": "1",
+          "morningTime": "9.30 AM"
+        },
+        {
+          "id": "2",
+          "morningTime": "10.00 AM"
+        },
+        {
+          "id": "3",
+          "morningTime": "10.30 AM"
+        },
+        {
+          "id": "4",
+          "morningTime": "11.00 AM"
+        },
+        {
+          "id": "5",
+          "morningTime": "11.30 AM"
+        },
+        {
+          "id": "6",
+          "morningTime": "12.00 AM"
+        }
+      ],
+      "Evening": [
+        {
+          "id": "1",
+          "eveningTime": "6.30 AM"
+        },
+        {
+          "id": "2",
+          "eveningTime": "7.30 AM"
+        },
+        {
+          "id": "3",
+          "eveningTime": "8.30 AM"
+        },
+        {
+          "id": "4",
+          "eveningTime": "6.00 AM"
+        },
+        {
+          "id": "5",
+          "eveningTime": "7.30 AM"
+        },
+        {
+          "id": "6",
+          "eveningTime": "8.00 AM"
+        }
+      ]
+    }
+  },
+  {
+    "id": "5",
+    "name": "Dan Lloyd",
+    "title": "Covid Sergeon, Dhaka",
+    "detailsAddress":"Hatirtheel 1219 Dhaka",
+    "image":"https://i.pinimg.com/736x/93/88/b0/9388b01402a04eff380801a9cb44f851.jpg",
+    "cost": "200",
+    "patients": "301",
+    "rating": "5",
+    "experience": "6",
+    "time": "6:30",
+    "timeZone": "PM",
+    "fee": "200",
+    "speciality": "Cardiologist",
+    "registration": "A66003",
+    "medicalExperience": "3",
+    "schedule": {
+      "Morning": [
+        {
+          "id": "1",
+          "morningTime": "9.30 AM"
+        },
+        {
+          "id": "2",
+          "morningTime": "10.00 AM"
+        },
+        {
+          "id": "3",
+          "morningTime": "10.30 AM"
+        },
+        {
+          "id": "4",
+          "morningTime": "11.00 AM"
+        },
+        {
+          "id": "5",
+          "morningTime": "11.30 AM"
+        },
+        {
+          "id": "6",
+          "morningTime": "12.00 AM"
+        }
+      ],
+      "Evening": [
+        {
+          "id": "1",
+          "eveningTime": "6.30 AM"
+        },
+        {
+          "id": "2",
+          "eveningTime": "7.30 AM"
+        },
+        {
+          "id": "3",
+          "eveningTime": "8.30 AM"
+        },
+        {
+          "id": "4",
+          "eveningTime": "6.00 AM"
+        },
+        {
+          "id": "5",
+          "eveningTime": "7.30 AM"
+        },
+        {
+          "id": "6",
+          "eveningTime": "8.00 AM"
+        }
+      ]
+    }
+  },
+  {
+    "id": "6",
+    "name": "Tommie Guerrero",
+    "title": "Covid Sergeon, Dhaka",
+    "detailsAddress":"1212 Dhaka",
+    "image":"https://i.pinimg.com/564x/ec/0f/3a/ec0f3a8e0284e332d64d84c75ca36a0b.jpg",
+    "cost": "200",
+    "patients": "301",
+    "rating": "5",
+    "experience": "6",
+    "time": "6:30",
+    "timeZone": "PM",
+    "fee": "200",
+    "speciality": "Cardiologist",
+    "registration": "A66003",
+    "medicalExperience": "3",
+    "schedule": {
+      "Morning": [
+        {
+          "id": "1",
+          "morningTime": "9.30 AM"
+        },
+        {
+          "id": "2",
+          "morningTime": "10.00 AM"
+        },
+        {
+          "id": "3",
+          "morningTime": "10.30 AM"
+        },
+        {
+          "id": "4",
+          "morningTime": "11.00 AM"
+        },
+        {
+          "id": "5",
+          "morningTime": "11.30 AM"
+        },
+        {
+          "id": "6",
+          "morningTime": "12.00 AM"
+        }
+      ],
+      "Evening": [
+        {
+          "id": "1",
+          "eveningTime": "6.30 AM"
+        },
+        {
+          "id": "2",
+          "eveningTime": "7.30 AM"
+        },
+        {
+          "id": "3",
+          "eveningTime": "8.30 AM"
+        },
+        {
+          "id": "4",
+          "eveningTime": "6.00 AM"
+        },
+        {
+          "id": "5",
+          "eveningTime": "7.30 AM"
+        },
+        {
+          "id": "6",
+          "eveningTime": "8.00 AM"
+        }
+      ]
+    }
+  }
 ]

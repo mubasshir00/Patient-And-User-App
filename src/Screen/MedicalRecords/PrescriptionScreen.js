@@ -1,52 +1,57 @@
-import { Box,Text,Image, ScrollView, Center } from 'native-base'
-import React from 'react'
-import { Dimensions, StyleSheet, View } from 'react-native'
-import { prescriptionData } from '../../assets/data/MedicalRecordsData/ConsultationData'
-
-const {width,height} = Dimensions.get('screen')
+import {Box, Text, Image, ScrollView, Center} from 'native-base';
+import React from 'react';
+import {Dimensions, StyleSheet, View} from 'react-native';
+import {prescriptionData} from '../../assets/data/MedicalRecordsData/ConsultationData';
+import Feather from 'react-native-vector-icons/Feather';
+const {width, height} = Dimensions.get('screen');
 
 const PrescriptionScreen = () => {
-    return (
-        <ScrollView background="blue.100">
-                <Box
-                    flex="1"
-                    flexDirection="row"
-                    flexWrap="wrap"
-                    alignItems="center"
-                    justifyContent="center"
-                    mt="2"
-                >
-                    {
-                        prescriptionData.map((item) => {
-                            const { id, image, date } = item
-                            return (
-                                <Box key={id}
-                                    px="2"
-                                >
-                                    <Box>
-                                        <Image
-                                            source={image}
-                                            alt="i"
-                                            resizeMode={'cover'}
-                                            width={width / 2.5}
-                                            height={width / 2}
-                                        />
-                                        <Box>
-                                            <Text
-                                             fontWeight="bold" textAlign="center"
-                                             my="2"
-                                             >{date}</Text>
-                                        </Box>
-                                    </Box>
-                                </Box>
-                            )
-                        })
-                    }
+  return (
+    <Box background="blue.100" flex={1}>
+      <ScrollView background="blue.100">
+        <Box
+          flex="1"
+          flexDirection="row"
+          flexWrap="wrap"
+          alignItems="center"
+          justifyContent="center"
+          mt="2">
+          {prescriptionData.map(item => {
+            const {id, image, date} = item;
+            return (
+              <Box key={id} px="2">
+                <Box>
+                  <Image
+                    source={image}
+                    alt="i"
+                    resizeMode={'cover'}
+                    width={width / 2.5}
+                    height={width / 2}
+                  />
+                  <Box>
+                    <Text fontWeight="bold" textAlign="center" my="2">
+                      {date}
+                    </Text>
+                  </Box>
                 </Box>
-        </ScrollView>
-    )
-}
+              </Box>
+            );
+          })}
+        </Box>
+      </ScrollView>
+      <Box style={styles.iconStyle}>
+        <Feather name="file-plus" size={50} color="black"/>
+      </Box>
+    </Box>
+  );
+};
 
-export default PrescriptionScreen
+export default PrescriptionScreen;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  iconStyle: {
+    position: 'absolute',
+    right:6,
+    bottom:6,
+  },
+});

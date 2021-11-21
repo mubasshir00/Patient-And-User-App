@@ -1,9 +1,18 @@
 import {useNavigation} from '@react-navigation/native';
 import {Box, Center, Flex, Image, Pressable, Text, Input} from 'native-base';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {StyleSheet, View, Dimensions} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 // import Input from '../../ReusableComponents/Form/Input';
+
+const dataCardio = require('../../assets/data/DoctorList/Cardio.json')
+const dataCovid = require('../../assets/data/DoctorList/Covid19.json')
+const dataPhy = require('../../assets/data/DoctorList/physician.json')
+const dataPol = require('../../assets/data/DoctorList/Pulmono.json')
+
+const combineDoctor ={...dataCardio,...dataCovid,...dataPhy,...dataPol}
+
+// console.log(combineDoctor);
 
 var {width} = Dimensions.get('window');
 
@@ -24,12 +33,46 @@ const data = [
   },
 ];
 
+
 const Category = () => {
+
+  const [doctors, setDoctors] = useState([])
+  const [doctorFiltered, setDoctorFiltered] = useState([])
+  const [focus, setFocus] = useState();
+
+  useEffect(() => {
+    setDoctors(combineDoctor);
+    setDoctorFiltered(combineDoctor);
+    setFocus(false)
+
+    return () => {
+      setDoctors([]);
+      setDoctorFiltered([]);
+      setFocus();
+    }
+  }, [])
+
+  const searchDoctor = (text) => {
+    setDoctorFiltered(
+      doctors.filter((i) => i.name.toLowerCase().includes(text.toLowerCase()))
+    )
+  }
+
+  const openList = () => {
+    setFocus(true);
+  }
+
+  const onBlur = () => {
+    setFocus(false);
+  }
+
+
   const [text, settext] = useState('');
   const navigation = useNavigation();
   return (
     <Center borderTopRadius="17" backgroundColor="info.100" mt={-width / 3}>
       <View style={styles.inputBox} backgroundColor="info.100">
+        
         <Input
           placeholder="Search"
           onChangeText={text => settext(text)}
@@ -41,6 +84,7 @@ const Category = () => {
           px="5"
           textAlign="center"
         />
+
       </View>
       <Flex direction="row" justifyContent="space-between" width={width - 30}>
         {data.map(item => {

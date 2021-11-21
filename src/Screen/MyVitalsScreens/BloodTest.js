@@ -2,6 +2,7 @@ import {Box, Center, Heading, ScrollView, Text} from 'native-base';
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import {bloodTestData} from '../../assets/data/MyVitals/MyVitalsData';
+import BloodTestBarChart from './BloodTestBarChart';
 
 const BloodTestTable = ({ testName, result, normalValue}) => {
   return (
@@ -31,6 +32,8 @@ const BloodTest = () => {
       <Center py="5">
         <Heading>Blood Test</Heading>
       </Center>
+
+      <BloodTestBarChart/>
 
       <Box>
         <Box mx="2" flexDirection="row" justifyContent="space-between">

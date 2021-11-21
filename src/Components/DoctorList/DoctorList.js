@@ -1,5 +1,5 @@
 import {useNavigation} from '@react-navigation/native';
-import {Box, Heading, Pressable,Text} from 'native-base';
+import {Box, Heading, Pressable,Text,Image} from 'native-base';
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
@@ -9,6 +9,7 @@ const DoctorList = ({
   name,
   title,
   cost,
+  image,
   rating,
   detailsAddress,
   patients,
@@ -24,15 +25,16 @@ const DoctorList = ({
   const ratingAv = Math.round((5 + rating - 5) / 11);
 
   const navigation = useNavigation();
-
+  // console.log(image);
   return (
     <Pressable
-      my="1.5"
+      my="2.5"
       borderRadius="2"
       onPress={() =>
         navigation.navigate('Details', {
           name: name,
           title: title,
+          image:image,
           cost: cost,
           rating: rating,
           detailsAddress: detailsAddress,
@@ -52,7 +54,7 @@ const DoctorList = ({
           <Box
             bg={isPressed ? 'blue.100' : isHovered ? 'cyan.800' : 'white'}
             px="2"
-            py="1"
+            py="3"
             style={{
               transform: [
                 {
@@ -65,6 +67,14 @@ const DoctorList = ({
             alignItems="center"
             borderRadius="5"
             >
+            <Box>
+              <Image 
+              source={{uri:image}}
+                alt="Image"
+                size={10}
+                borderRadius="100"
+                />
+            </Box>
             <Box>
               <Heading fontSize={15}>{name}</Heading>
               <Text fontSize={13}>{title}</Text>

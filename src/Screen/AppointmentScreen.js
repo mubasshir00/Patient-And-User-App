@@ -9,7 +9,7 @@ const AppointmentScreen = () => {
     const activeApointment = appointmentData.filter((item)=> item.active===true)
     const postAppointment = appointmentData.filter((item)=>item.active===false)
     return (
-        <Box backgroundColor="info.100" flex={1}>
+        <Box backgroundColor="" flex={1}>
             <ScrollView>
                 <ActiveAppointment activeApointment={activeApointment} />
                 <PostAppointment postAppointment={postAppointment} />
