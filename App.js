@@ -7,25 +7,25 @@ import 'react-native-gesture-handler'
 import Main from './src/Navigators/Main'
 import { Box, NativeBaseProvider } from 'native-base'
 import AuthScreen from './src/Screen/AuthScreen'
+import Register from './src/Components/Auth/Register'
 
 const App = () => {
 
   const [isLogin, setisLogin] = useState(true)
-
   const checkLogin = () =>{
-    
+     
   }
 
   return (
     <NativeBaseProvider>
-      <NavigationContainer>
+      {/* <NavigationContainer>
         {
           isLogin ? <Box style={styles.container}>
-            {/* <QuickSpecialist/> */}
             <Main />
           </Box> : <AuthScreen />
         }
-      </NavigationContainer>
+      </NavigationContainer> */}
+      <Register/>
     </NativeBaseProvider>
   )
 }
