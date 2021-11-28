@@ -7,16 +7,40 @@ import FontAweSome from 'react-native-vector-icons/FontAwesome'
 import Entypo from 'react-native-vector-icons/Entypo'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import AntDesign from 'react-native-vector-icons/AntDesign'
+import { connect } from 'react-redux'
+
+import * as actions from '../Redux/Actions/bookActions'
 
 const { width, height } = Dimensions.get('window')
+
+
 const ratingAv = 4
 
 //here props come from DoctorList 
 const SingleSpecialist = (props) => {
     const [specialist, setSpecialist] = useState(props.route.params)
+    
     const { name, title, image, cost, rating, detailsAddress, patients, experience, time, timeZone, fee, speciality, registration, medicalExperience, schedule } = specialist
     
     const navigation = useNavigation()
+
+    const onPressDataPassing = () =>{
+        props.addDoctorToBook(specialist)
+    }
+
+    const navigationToNextPage = () =>{
+        navigation.navigate('Schedule', {
+            name: name,
+            title: title,
+            rating: rating,
+            schedule: schedule
+        })
+    }
+
+    const combineFunction = () =>{
+        navigationToNextPage()
+        onPressDataPassing()
+    }
 
     return (
         <Box
@@ -219,12 +243,7 @@ const SingleSpecialist = (props) => {
             </ScrollView>
             <TouchableOpacity 
             onPress={()=>
-                navigation.navigate('Schedule',{
-                    name:name,
-                    title:title,
-                    rating:rating,
-                    schedule: schedule
-                })
+                    combineFunction()
             }
             >
                 <Center background="#5099F3" mx="3" py="2">
@@ -235,7 +254,14 @@ const SingleSpecialist = (props) => {
     )
 }
 
-export default SingleSpecialist
+const mapDispatchToProps = (dispatch) =>{
+    return {
+        addDoctorToBook : (doctor) => 
+            dispatch(actions.addToBook({testData :4, doctor}))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(SingleSpecialist)
 
 const styles = StyleSheet.create({
     container: {

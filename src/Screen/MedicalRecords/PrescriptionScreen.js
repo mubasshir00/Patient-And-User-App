@@ -1,10 +1,10 @@
 import {Box, Text, Image, ScrollView, Center} from 'native-base';
 import React from 'react';
-import {Dimensions, StyleSheet, View} from 'react-native';
+import {Dimensions, StyleSheet, View,TouchableOpacity} from 'react-native';
 import {prescriptionData} from '../../assets/data/MedicalRecordsData/ConsultationData';
 import Feather from 'react-native-vector-icons/Feather';
 const {width, height} = Dimensions.get('screen');
-
+// import FontAwesome from 'reac'
 const PrescriptionScreen = () => {
   return (
     <Box background="blue.100" flex={1}>
@@ -39,9 +39,9 @@ const PrescriptionScreen = () => {
           })}
         </Box>
       </ScrollView>
-      <Box style={styles.iconStyle}>
-        <Feather name="file-plus" size={50} color="black"/>
-      </Box>
+      <TouchableOpacity style={styles.iconStyle}>
+        <Feather name="camera" size={50} color="black"/>
+      </TouchableOpacity>
     </Box>
   );
 };

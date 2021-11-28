@@ -6,6 +6,10 @@ const data = require('../assets/data/DoctorList/Cardio.json');
 
 const { width, height } = Dimensions.get('window')
 
+import baseURL from '../assets/common/baseUrl';
+
+import axios from 'axios';
+
 import FontAweSome from 'react-native-vector-icons/FontAwesome'
 import SearchDoctor from '../Search/SearchDoctor';
 
@@ -14,10 +18,42 @@ const CardioScreen = () => {
     const [doctorFiltered, setDoctorFiltered] = useState([])
     const [focus,setFocus] = useState();
 
+    const [testDoctorsAPI, setTestDoctorsAPI] = useState([])
+
     useEffect(() => {
         setDoctors(data);
         setDoctorFiltered(data);
-        setFocus(false)
+        setFocus(false);
+
+      
+
+        // const userId = 
+        //     {
+        //     "presharedSecretKey": "3UsRP0FKpw5Ztp98vsKGSYUN",
+        //     "count": 1,
+        //     "daysWorth": 365
+        //    }
+        
+
+        // axios
+        //     .post(`${baseURL}internal-generate-activation-key`, userId)
+        //     .then((res)=>{
+        //        console.log(res.data);
+        //     })
+        //     .catch((error)=>{
+        //         console.log(error);
+        //     })
+
+
+
+        // axios
+        //  .get(`${baseURL}doctors`)
+        //  .then((res)=>{
+        //      setTestDoctorsAPI(res.data)
+        //  })
+        //  .catch((error)=>{
+        //      console.log(error);
+        //  })
         
         return () =>{
             setDoctors([]);
@@ -25,6 +61,9 @@ const CardioScreen = () => {
             setFocus();
         }
     }, [])
+
+    console.log(testDoctorsAPI);
+
 
     const searchDoctor = (text) =>{
         setDoctorFiltered(

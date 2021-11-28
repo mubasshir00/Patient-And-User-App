@@ -1,0 +1,1 @@
+export const BOOK_APPOINTMENT = "BOOK_APPOINTMENT"

@@ -7,6 +7,9 @@ const data = require('../assets/data/DoctorList/Covid19.json');
 import FontAweSome from 'react-native-vector-icons/FontAwesome'
 import SearchDoctor from '../Search/SearchDoctor';
 
+import baseURL from '../assets/common/baseUrl';
+import axios from 'axios';
+
 const { width, height } = Dimensions.get('window')
 
 const Covid19Screen = () => {

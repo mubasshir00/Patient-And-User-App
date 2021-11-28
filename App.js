@@ -9,6 +9,9 @@ import { Box, NativeBaseProvider } from 'native-base'
 import AuthScreen from './src/Screen/AuthScreen'
 import Register from './src/Components/Auth/Register'
 
+import { Provider } from 'react-redux'
+import store from './src/Redux/store'
+
 const App = () => {
 
   const [isLogin, setisLogin] = useState(true)
@@ -17,16 +20,18 @@ const App = () => {
   }
 
   return (
-    <NativeBaseProvider>
-      {/* <NavigationContainer>
-        {
-          isLogin ? <Box style={styles.container}>
-            <Main />
-          </Box> : <AuthScreen />
-        }
-      </NavigationContainer> */}
-      <Register/>
-    </NativeBaseProvider>
+    <Provider store={store}>
+      <NativeBaseProvider>
+        <NavigationContainer>
+          {
+            isLogin ? <Box style={styles.container}>
+              <Main />
+            </Box> : <AuthScreen />
+          }
+        </NavigationContainer>
+        {/* <Register/> */}
+      </NativeBaseProvider>
+    </Provider>
   )
 }
 

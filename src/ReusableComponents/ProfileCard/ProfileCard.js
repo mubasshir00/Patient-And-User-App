@@ -5,7 +5,8 @@ import Entypo from 'react-native-vector-icons/Entypo'
 import { StyleSheet, View } from 'react-native'
 const ratingAv = 4
 
-const ProfileCard = () => {
+const ProfileCard = (props) => {
+    const { name, detailsAddress, image} = props
     return (
         <Box
             flexDirection="row"
@@ -17,15 +18,15 @@ const ProfileCard = () => {
                 alignItems="center"
             >
                 <Image
-                    source={require('../../assets/images/Tesla_circa_1890.jpeg')}
+                    source={{ uri: image }}
                     alt="Tesla"
                     style={styles.image}
                     size={60}
                     borderRadius={100}
                 />
                 <Box p="2">
-                    <Heading fontSize="16">Rashed Khan</Heading>
-                    <Text>Cardiac Sergeon,Dhaka</Text>
+                    <Heading fontSize="16">{name}</Heading>
+                    <Text>{detailsAddress}</Text>
                 </Box>
             </Box>
             <Box>

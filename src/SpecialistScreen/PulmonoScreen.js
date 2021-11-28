@@ -1,5 +1,5 @@
 import { Box, Center, FlatList, Input } from 'native-base';
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Dimensions, StyleSheet, Text, View } from 'react-native'
 import DoctorList from '../Components/DoctorList/DoctorList';
 
@@ -10,6 +10,8 @@ import SearchDoctor from '../Search/SearchDoctor';
 const { width, height } = Dimensions.get('window')
 
 const PulmonoScreen = () => {
+
+    
 
     const [doctors, setDoctors] = useState([])
     const [doctorFiltered, setDoctorFiltered] = useState([])
