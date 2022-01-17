@@ -4,13 +4,13 @@ import { NavigationContainer } from '@react-navigation/native'
 import 'react-native-gesture-handler'
 
 //Navigators
-import Main from './src/Navigators/Main'
+import Main from './src/PatientApp/Navigators/Main'
 import { Box, NativeBaseProvider } from 'native-base'
-import AuthScreen from './src/Screen/AuthScreen'
-import Register from './src/Components/Auth/Register'
+import AuthScreen from './src/PatientApp/Screen/AuthScreen'
+import Register from './src/PatientApp/Components/Auth/Register'
 
 import { Provider } from 'react-redux'
-import store from './src/Redux/store'
+import store from './src/PatientApp/Redux/store'
 
 const App = () => {
 
