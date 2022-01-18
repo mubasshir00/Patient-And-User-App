@@ -11,27 +11,45 @@ import Register from './src/PatientApp/Components/Auth/Register'
 
 import { Provider } from 'react-redux'
 import store from './src/PatientApp/Redux/store'
+import CustomerApp from './src/CustomerApp'
+
+const PatientApp = () =>{
+  const [isLogin, setisLogin] = useState(true)
+
+  return(
+    <NativeBaseProvider>
+      <NavigationContainer>
+        {
+          isLogin ? <Box style={styles.container}>
+            <Main />
+          </Box> : <AuthScreen />
+        }
+      </NavigationContainer>
+      {/* <Register/> */}
+    </NativeBaseProvider>
+  )
+}
+
+const Customer = () =>{
+  return(
+    <NativeBaseProvider>
+      <NavigationContainer>
+        <CustomerApp />
+      </NavigationContainer>
+      {/* <Register/> */}
+    </NativeBaseProvider>
+  )
+}
 
 const App = () => {
 
-  const [isLogin, setisLogin] = useState(true)
   const checkLogin = () =>{
      
   }
 
   return (
-    <Provider store={store}>
-      <NativeBaseProvider>
-        <NavigationContainer>
-          {
-            isLogin ? <Box style={styles.container}>
-              <Main />
-            </Box> : <AuthScreen />
-          }
-        </NavigationContainer>
-        {/* <Register/> */}
-      </NativeBaseProvider>
-    </Provider>
+      // <PatientApp/>
+    <Customer/>
   )
 }
 
