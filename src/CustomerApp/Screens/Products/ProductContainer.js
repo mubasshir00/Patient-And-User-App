@@ -1,30 +1,90 @@
-import { Box, Text } from 'native-base'
+import { Box, Input, Text,Center } from 'native-base'
 import React, { useEffect, useState } from 'react'
 import { FlatList, StyleSheet, View } from 'react-native'
 import ProductList from './ProductList'
+import FontAweSome from 'react-native-vector-icons/FontAwesome'
+import SearchedProduct from './SearchedProduct'
+
 const data = require('../../assets/data/products.json')
 const ProductContainer = () => {
     const [products, setProducts] = useState([])
+    const [productsFiltered, setProductsFiltered] = useState([]);
     
+    const [focus, setFocus] = useState();
+    const openList = () => {
+        setFocus(true);
+    }
+
+    const onBlur = () => {
+        setFocus(false);
+    }
+
     useEffect(() => {
         setProducts(data)
+        setProductsFiltered(data)
+        setFocus(false);
+
         return () =>{
             setProducts([])
+            setProductsFiltered([])
+            setFocus()
         }
     }, [])
 
+    const searchProduct = (text) =>{
+        setProductsFiltered(
+            products.filter((i)=>i.name.toLowerCase().includes(text.toLowerCase()))
+        )
+    }
+
+
     return (
         <Box>
-            <Text>Product Container</Text>
-            <View style={{marginTop:100}}>
-                <FlatList
-                    
-                    numColumns={2}
-                    data={products}
-                    renderItem={({ item }) => <ProductList key={item.id} item={item}/>}
-                    keyExtractor={item => item.name}
+            <Center
+                mx="3"
+                w={{
+                    base: "100%",
+                    md: "25%",
+                }}
+                flexDirection="row"
+            >
+                <Input
+                    mx="3"
+                    placeholder="Search"
+                    w={{
+                        base: "85%",
+                        md: "25%",
+                    }}
+                    backgroundColor="white"
+                    borderRadius={5}
+                    onFocus={openList}
+                    onChangeText={(text) => searchProduct(text)}
                 />
-            </View>
+
+                {
+                    focus == true ? (
+                        <FontAweSome onPress={onBlur} name="close" size={30} />
+                    ) : null
+                }
+            </Center>
+            {
+                focus == true ? (
+                <SearchedProduct productsFiltered={productsFiltered}/>
+                ) : (
+            <Box>
+                <Text>Product Container</Text>
+                <View style={{ marginTop: 100 }}>
+                    <FlatList
+
+                        numColumns={2}
+                        data={products}
+                        renderItem={({ item }) => <ProductList key={item.id} item={item} />}
+                        keyExtractor={item => item.name}
+                    />
+                </View>
+            </Box >
+                )
+            }
         </Box>
     )
 }
