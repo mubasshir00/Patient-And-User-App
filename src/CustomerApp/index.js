@@ -1,14 +1,14 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { SafeAreaView, StyleSheet, Text, View } from 'react-native'
 import ProductContainer from './Screens/Products/ProductContainer'
 import Header from './Shared/Header'
 
 const CustomerApp = () => {
     return (
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
             <Header/>
             <ProductContainer/>
-        </View>
+        </SafeAreaView>
     )
 }
 

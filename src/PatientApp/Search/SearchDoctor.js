@@ -16,9 +16,6 @@ const SearchDoctor = (props) => {
            {
                doctorFiltered.length > 0 ? (
                    doctorFiltered.map((item)=>(
-                    
-                    
-
                      <Pressable 
                      key={item.id}
                      my="2.5"
