@@ -33,9 +33,7 @@ const PatientApp = () =>{
 const Customer = () =>{
   return(
     <NativeBaseProvider>
-      <NavigationContainer>
         <CustomerApp />
-      </NavigationContainer>
       {/* <Register/> */}
     </NativeBaseProvider>
   )

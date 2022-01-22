@@ -1,6 +1,6 @@
 import { Box, Input, Text,Center } from 'native-base'
 import React, { useEffect, useState } from 'react'
-import { FlatList, ScrollView, StyleSheet, View } from 'react-native'
+import { Dimensions, FlatList, ScrollView, StyleSheet, View } from 'react-native'
 import ProductList from './ProductList'
 import FontAweSome from 'react-native-vector-icons/FontAwesome'
 import SearchedProduct from './SearchedProduct'
@@ -9,6 +9,8 @@ import CategoryFilter from './CategoryFilter'
 
 const data = require('../../assets/data/products.json')
 const productsCategories = require('../../assets/data/categories.json')
+
+const {height} = Dimensions.get('window')
 
 const ProductContainer = () => {
     const [products, setProducts] = useState([]);
@@ -46,6 +48,7 @@ const ProductContainer = () => {
         setCategories(productsCategories)
         setActive(-1)
         setInitialState(data)
+        setProductsCtg(data)
 
         return () =>{
             setProducts([])
@@ -78,7 +81,7 @@ const ProductContainer = () => {
                     mx="3"
                     placeholder="Search"
                     w={{
-                        base: "85%",
+                        base: "75%",
                         md: "25%",
                     }}
                     backgroundColor="white"
@@ -110,14 +113,30 @@ const ProductContainer = () => {
                 setActive={setActive}
               />
             </View>
-            <View >
-                <FlatList
+            {
+            productsCtg.length>0 ? (
+            <View style={styles.listContainer}>
+            {
+            productsCtg.map((item)=>{
+                return(
+                <ProductList
+                key={item._id} item={item}/>
+                )
+            })
+            }
+            </View>
+            ) : <View style={[styles.center,{height:height/2}]}>
+                <Text>
+                    No Product Found
+                </Text>
+            </View>
+            }
+                {/* <FlatList
                 numColumns={2}
                 data={products}
                 renderItem={({ item }) => <ProductList key={item.id} item={item} />}
                 keyExtractor={item => item.name}
-                />
-                </View>
+                /> */}
             </ScrollView >
                 )
             }
@@ -127,4 +146,19 @@ const ProductContainer = () => {
 
 export default ProductContainer
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    container:{
+        flexWrap:'wrap'
+    },
+    listContainer:{
+        height:height,
+        flex:1,
+        flexDirection:'row',
+        alignItems:'flex-start',
+        flexWrap:'wrap'
+    },
+    center:{
+        justifyContent:'center',
+        alignItems:'center'
+    }
+})
