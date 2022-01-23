@@ -4,6 +4,9 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Box, Text } from 'native-base';
 import Icon from 'react-native-vector-icons/FontAwesome'
 import HomeNavigator from './HomeNavigator';
+import CartNavigator from './CartNavigator';
+import AdminNavigator from './AdminNavigator';
+import UserNavigator from './UserNavigator';
 
 const Tab = createBottomTabNavigator()
 
@@ -33,9 +36,9 @@ const Main = () => {
      }
     }
      />
-     {/* <Tab.Screen 
+     <Tab.Screen 
      name="Cart"
-     component={}
+     component={CartNavigator}
      options={{
          tabBarIcon:({color})=>(
           <Icon
@@ -44,12 +47,13 @@ const Main = () => {
               color={color}
               size={30}
           />
-         )
+         ),
+         headerShown: false
      }}
      />
      <Tab.Screen 
               name="Admin"
-              component={ }
+              component={AdminNavigator}
               options={{
                   tabBarIcon: ({ color }) => (
                       <Icon
@@ -58,12 +62,13 @@ const Main = () => {
                           color={color}
                           size={30}
                       />
-                  )
+                  ),
+                  headerShown: false
               }}
      />
           <Tab.Screen
               name="User"
-              component={ }
+              component={UserNavigator}
               options={{
                   tabBarIcon: ({ color }) => (
                       <Icon
@@ -72,9 +77,10 @@ const Main = () => {
                           color={color}
                           size={30}
                       />
-                  )
+                  ),
+                  headerShown: false
               }}
-          /> */}
+          />
     </Tab.Navigator>
   );
 };

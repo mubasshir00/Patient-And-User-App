@@ -69,19 +69,20 @@ const ProductContainer = () => {
 
     return (
         <Box>
-            <Center
-                mx="3"
+            <Box 
                 w={{
                     base: "100%",
                     md: "25%",
                 }}
                 flexDirection="row"
+                justifyContent="center"
+                alignItems="center"
             >
                 <Input
                     mx="3"
                     placeholder="Search"
                     w={{
-                        base: "75%",
+                        base: "100%",
                         md: "25%",
                     }}
                     backgroundColor="white"
@@ -95,7 +96,7 @@ const ProductContainer = () => {
                         <FontAweSome onPress={onBlur} name="close" size={30} />
                     ) : null
                 }
-            </Center>
+            </Box>
             {
                 focus == true ? (
                 <SearchedProduct productsFiltered={productsFiltered}/>
